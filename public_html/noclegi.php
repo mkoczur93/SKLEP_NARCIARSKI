@@ -278,12 +278,54 @@
 			<!-- Nastepny nocleg -->
 			
       </div>
-
+	  </div>
+  </body>
 
       <footer>
-        <p>&copy; Company 2015</p>
+
+    <div class="container-fluid">
+      <!-- Example row of columns -->
+     <div class="row no-gutters">
+	    
+		<div class="col-md-12 stopka">
+		
+		<div class="col-md-4">
+		 <p>Dane Kontaktowe:</p>
+		 <p>Sklep Narciarski Web-Ski</p>
+         <p>43-233 Zakopane</p>
+		 <p>ul.Strzegoma 32</p>
+		 
+		 </div>
+		 
+		 
+	    <div class="col-md-4">
+		<p>Partnerzy:</p>
+		<p>Skok Narciarski Czarna Dolina</p>
+	  
+	    </div>
+		
+		
+		
+		<div class="col-md-4">
+
+	  
+	    </div>
+		
+		<div class="col-md-12 text-right">
+				<p>Copyright © 2020 Web-Ski</p>
+		</div>
+		</div>
+		
+	  </div>
+	</div>
+	  
+	  
+	  
+	  
+	  
+	  
       </footer>
-    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+     <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
