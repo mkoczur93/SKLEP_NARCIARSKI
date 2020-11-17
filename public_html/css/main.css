@@ -12,12 +12,23 @@ body {
 	 background-repeat: repeat
 	
      }
-       
+    .menu
+    {
+        border: 4px solid #333;
+        padding: 6px;
+        border-radius: 7px
+    }
+    
+    .navbar-center
+    {
+        float:center ;
+    }
+    
      .jumbotron
      {
      background-color: #86E6FF;    
      }
-
+    
 
 
 
