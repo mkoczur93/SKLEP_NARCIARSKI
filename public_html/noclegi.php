@@ -23,13 +23,9 @@
 	
 	
 
-	
-	  
-	
+	<header>
 
-	
-    <body>
-	  <div class="container no-gutters">
+	<div class="container no-gutters">
       <!-- Example row of columns -->
       <div class="row no-gutters">
 	 <div class="col-md-12 logo">
@@ -43,30 +39,56 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Główne menu sklepu</a>
+    
+		 <!--menu glowne-->
+		 <div id="navbar">
+<div class="bg-dark container-fluid menu "> 
+    <div class="container" style="padding-left: 0px;padding-right: 0px;font-size: 12px;">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+  
+    <ul class="nav navbar-nav" >
+      <li><a href="http://localhost/sklep_narciarski/public_html/index.php">Strona Główna</a></li>
+
+<!--Dropp menu-->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Cennik
+        </a>
+        <div class="dropdown-menu dropstyle">
+          <a class="dropdown-item dropstyle"  href="http://localhost/sklep_narciarski/public_html/cennikWypozyczen.php">Cennik wypożyczeń</a>
+          <a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/cennikSprzetu.php">Cennik serwisu sprzętu</a>
+          <a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/cennikLekcji.php">Cennik lekcji z instruktorem</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
-        </div><!--/.navbar-collapse -->
-      </div>
-    </nav>
+      </li>
+<!--Dropp end-->
+
+      <li><a href="http://localhost/sklep_narciarski/public_html/kontakt.php">Kontakt</a></li>
+      <li><a href="http://localhost/sklep_narciarski/public_html/sklep.php">Sklep</a></li>
+      <li><a href="http://localhost/sklep_narciarski/public_html/trasy.php">Trasy</a></li>
+	  <li><a href="http://localhost/sklep_narciarski/public_html/instruktorzy.php">Instruktorzy</a></li>
+      <li class="active"><a href="http://localhost/sklep_narciarski/public_html/noclegi.php">Noclegi</a></li>
+      <li><a href="http://localhost/sklep_narciarski/public_html/restauracje.php">Restauracje</a></li>
+      <li><a href="http://localhost/sklep_narciarski/public_html/kameraonline.php">Kamera Online</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="http://localhost/sklep_narciarski/public_html/rejestracja.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="http://localhost/sklep_narciarski/public_html/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+</div>
+</div>
+</div>
+         <!--koniec menu glownego-->
+
+	</header>
+	  
+	
+
+	
+    <body>
+	
 
     
 
@@ -342,5 +364,21 @@
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
         <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-    </body>
+	
+		
+		<script>
+        window.onscroll = function() {myFunction()};
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+		</script>
+		
 </html>

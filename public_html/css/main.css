@@ -6,7 +6,7 @@
 
 
 body {
-     padding-top: 50px;
+    
      padding-bottom: 20px;
      background-image: url("../img/winter1.jpg");
 	 background-repeat: repeat
@@ -116,7 +116,74 @@ button:hover.nocleg {
 
 
 
+.instruktor
+	{
+      position: relative;
+	   padding-top:20px;
+	   padding-bottom:20px;
+	   margin-top:10px;
+	   /*border: 2px solid black;*/
+	   background-color: #FFFFFF;
+	}
 
 
 
 
+.instruktor-opis
+  { 
+  
+  text-align: justify;
+  margin-top: 20px;
+   
+
+}
+
+.menu{
+   background-color:#222;
+   margin-bottom: 0px;  
+   border-radius: 4px;
+   border: 1px solid transparent;
+}
+
+.navbar-inverse{
+
+   
+   margin-bottom: 0px;
+   border-radius: 0px;
+   border: 0px solid transparent
+}
+
+.dropstyle
+{
+   color: #888;
+   text-decoration: none;
+   background-color:#222;
+   
+}
+
+.dropstyle:hover
+{
+   text-decoration: none;
+   color:white;
+}
+
+
+
+ 
+ /* Page content */
+ .content {
+   padding: 16px;
+ }
+ 
+ /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+ .sticky {
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: 200;
+ }
+ 
+ /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+ .sticky + .content {
+   padding-top: 60px;
+ }
