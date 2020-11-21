@@ -75,7 +75,7 @@
 </div>
 </div>
 </div>
-         <!--koniec menu glownego -->
+         <!--koniec menu glownego-->
 </header>
     <body>
 	
