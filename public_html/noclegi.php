@@ -128,11 +128,11 @@
 					
 					<div class="col-md-12">
 					<div class="col-md-9">
-					</div>
-					<div class="col-md-3">
-					 <button class="nocleg" onclick="window.location.href='https://meteor-turystyka.pl/mrowce,zakopane.html ';">Zobacz więcej</button></p>
-					</div>
-					</div>
+						</div>
+							<div class="col-md-3">
+							<button class="nocleg" onclick="window.location.href='https://meteor-turystyka.pl/mrowce,zakopane.html ';">Zobacz więcej</button></p>
+							</div>
+						</div>
 		
 		
 		
