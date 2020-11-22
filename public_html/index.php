@@ -17,142 +17,251 @@
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="https://kit.fontawesome.com/30b0a9457c.js" crossorigin="anonymous"></script>
     </head>
 
     <header>
 
-     <!--komentarz>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <div class="container no-gutters">
-      <!-- Example row of columns -->
-      <div class="row no-gutters">
-	 <div class="col-md-12 logo">
-		<img src="img/logo.png" alt="Obrazek_noclegi">	
-		
-	 </div>
-	 </div>
-  </div>
-  
-         <!--menu glowne-->
-         <div id="navbar">
-<div class="bg-dark container-fluid menu "> 
-    <div class="container" style="padding-left: 0px;padding-right: 0px;font-size: 12px;">
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-  
-    <ul class="nav navbar-nav" >
-      <li class="active"><a href="http://localhost/sklep_narciarski/public_html/index.php">Strona Główna</a></li>
-
-<!--Dropp menu-->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          Cennik
-        </a>
-        <div class="dropdown-menu dropstyle">
-          <a class="dropdown-item dropstyle"  href="http://localhost/sklep_narciarski/public_html/cennikWypozyczen.php">Cennik wypożyczeń</a>
-          <a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/cennikSprzetu.php">Cennik serwisu sprzętu</a>
-          <a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/cennikLekcji.php">Cennik lekcji z instruktorem</a>
+          <!--komentarz>
+              <!--[if lt IE 8]>
+                  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+              <![endif]-->
+              <div class="container no-gutters">
+            <!-- Example row of columns -->
+            <div class="row no-gutters">
+            <div class="col-md-12 logo">
+              <img src="img/logo.png" alt="Obrazek_noclegi">	
+              
+            </div>
         </div>
-      </li>
-<!--Dropp end-->
-
-      <li><a href="http://localhost/sklep_narciarski/public_html/kontakt.php">Kontakt</a></li>
-      <li><a href="http://localhost/sklep_narciarski/public_html/sklep.php">Sklep</a></li>
-      <li><a href="http://localhost/sklep_narciarski/public_html/trasy.php">Trasy</a></li>
-      <li><a href="http://localhost/sklep_narciarski/public_html/instruktorzy.php">Instruktorzy</a></li>
-      <li><a href="http://localhost/sklep_narciarski/public_html/noclegi.php">Noclegi</a></li>
-      <li><a href="http://localhost/sklep_narciarski/public_html/restauracje.php">Restauracje</a></li>
-      <li><a href="http://localhost/sklep_narciarski/public_html/kameraonline.php">Kamera Online</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="http://localhost/sklep_narciarski/public_html/rejestracja.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="http://localhost/sklep_narciarski/public_html/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-  </div>
-</nav>
-</div>
-</div>
-</div>
-         <!--koniec menu glownego -->
-</header>
-    <body>
-	
-	
-	
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
+        </div>
         
-        <h1>  otwarcie sezonu. nowe promocje </h1>
-        <p>This is a template for a simple marketing or informational website. 
-        It includes a large callout called a jumbotron and three supporting pieces of content. 
-        Use it as a starting point to create something more unique.This is a template for a simple marketing or informational website. 
-        It includes a large callout called a jumbotron and three supporting pieces of content. 
-        Use it as a starting point to create something more uniqueThis is a template for a simple marketing or informational website. 
-        It includes a large callout called a jumbotron and three supporting pieces of content. 
-        Use it as a starting point to create something more unique</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-      </div>
-    </div>
+              <!--menu glowne-->
+              <div id="navbar">
+      <div class="bg-dark container-fluid menu "> 
+          <div class="container" style="padding-left: 0px;padding-right: 0px;font-size: 12px;">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+        
+          <ul class="nav navbar-nav" >
+            <li class="active"><a href="http://localhost/sklep_narciarski/public_html/index.php">Strona Główna</a></li>
 
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      <!--Dropp menu-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                Cennik
+              </a>
+              <div class="dropdown-menu dropstyle">
+                <a class="dropdown-item dropstyle"  href="http://localhost/sklep_narciarski/public_html/cennikWypozyczen.php">Cennik wypożyczeń</a>
+                <a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/cennikSprzetu.php">Cennik serwisu sprzętu</a>
+                <a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/cennikLekcji.php">Cennik lekcji z instruktorem</a>
+              </div>
+            </li>
+      <!--Dropp end-->
+
+            <li><a href="http://localhost/sklep_narciarski/public_html/kontakt.php">Kontakt</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/sklep.php">Sklep</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/trasy.php">Trasy</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/instruktorzy.php">Instruktorzy</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/noclegi.php">Noclegi</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/restauracje.php">Restauracje</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/kameraonline.php">Kamera Online</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://localhost/sklep_narciarski/public_html/rejestracja.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
         </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
+      </nav>
       </div>
+      </div>
+      </div>
+         <!--koniec menu glownego -->
+    </header>
 
-      <hr>
+<body>
 
-      <footer>
-        <p>&copy; Company 2015</p>
-      </footer>
-    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+  <div class="container">
+     <!-- Example row of columns -->
+    <div class="row no-gutters">
+    <div class="col-md-12 nocleg ">		
+		
+    <div class="col-md-4">
+    <figure>
+    <img src="img\img_b\buty-narciarskie-salomon-8739-s-pro-90-m.jpg"  alt="Obrazek_buta">						
+    </figure>
 
-        <script src="js/vendor/bootstrap.min.js"></script>
 
-        <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
-        <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</div>
+<div class="col-md-8">
+    <div class="col-md-12">
     
-        <script>
-        window.onscroll = function() {myFunction()};
+          <p><h3 class="nocleg">zapraszamy na nowe promocje </h1></p>
+    </div>
+    
+  
+    <div class="col-md-12">
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+                            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
+                            and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                            leap into electronic typesetting, remaining essential. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                            type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                            electronic typesetting, remaining essential . </p>
+    </div>
+    
+    <div class="col-md-12">
+    <div class="col-md-9">
+      </div>
+        <div class="col-md-3">
+        <button class="nocleg" onclick="window.location.href='# ';">przejdź do sklepu</button></p>
+        </div>
+      </div>
+     </div>
+ </div>
+  <div class="col-md-12 nocleg ">		
+		
+    <div class="col-md-4">
+    <figure>
+    <img src="img\img_n\set-narciarski-rossignol-01li-react-r4-sport-m.jpg"  alt="Obrazek_buta">						
+    </figure>
+    
 
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
+</div>
+<div class="col-md-8">
+    <div class="col-md-12">
+    
+          <p><h3 class="nocleg">Wyprzedaże - 100%!!! </h1></p>
+    </div>
+    
+  
+    <div class="col-md-12">
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+                            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
+                            and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                            leap into electronic typesetting, remaining essential. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                            type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                            electronic typesetting, remaining essential . </p>
+    </div>
+    
+    <div class="col-md-12">
+    <div class="col-md-9">
+      </div>
+        <div class="col-md-3">
+        <button class="nocleg" onclick="window.location.href='# ';">przejdź do sklepu</button></p>
+        </div>
+      </div>
+     </div>
+ </div>
+   <!--   następny    -->
+                      <div class="col-md-12 instruktor" >
+                                <div class="col-md-3 menu_na_dole">
+                                
+                                    <h2 class="center"><i class="fas fa-tools "></i><br></br> Montujemy wiązania</h2>
+                                    
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
+                                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the </p>
+                                    <p><a class="btn btn-default" href="#" role="button">szczegóły &raquo;</a></p>
+                                </div>
+                                <div class="col-md-3 menu_na_dole">
+                                    <h2 class="center"><i class="fas fa-question"></i> <br></br>Jak dobrać sprzęt?</h2>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
+                                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the </p>
+                                    <p><a class="btn btn-default" href="#" role="button">szczegóły &raquo;</a></p>
+                                </div>
+                                <div class="col-md-3 menu_na_dole">
+                                    <h2 class="center"><i class="fas fa-crosshairs"></i><br></br>Porady specjalistów</h2>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
+                                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the </p>
+                                    <p><a class="btn btn-default" href="#" role="button">szczegóły &raquo;</a></p>
+                                  </div>
+                               <div class="col-md-3  menu_na_dole">
+                                    <h2 class="center"><i class="fas fa-truck"><br></br></i>Natychmiastowa wysyłka</h2>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
+                                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the </p>
+                                    <p><a class="btn btn-default" href="#" role="button">szczegóły &raquo;</a></p>
+                               </div>
+                  </div>                    
+      </div>
+    </div>               
+  </div>
+</body>
 
-        function myFunction() {
-          if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-          } else {
-            navbar.classList.remove("sticky");
-          }
-        }
-        </script>
+<footer>
+
+        <div class="container-fluid">
+            <!-- Example row of columns -->
+                <div class="row no-gutters">
+                
+              <div class="col-md-12 stopka">
+              
+              <div class="col-md-4">
+                <p>Dane Kontaktowe:</p>
+                <p>Sklep Narciarski Web-Ski</p>
+                    <p>43-233 Zakopane</p>
+                <p>ul.Strzegoma 32</p>
+                
+                </div>
+                
+                
+                <div class="col-md-4">
+              <p>Partnerzy:</p>
+              <p>Skok Narciarski Czarna Dolina</p>
+          
+            </div>
+          
+          
+          
+            <div class="col-md-4">
+
+          
+            </div>
+          
+            <div class="col-md-12 text-right">
+              <p>Copyright © 2020 Web-Ski</p>
+          </div>
+          </div>
+          
+          </div>
+        </div> 
+
+        
+</footer>
+    <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+       <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+       <script src="js/vendor/bootstrap.min.js"></script>
+
+       <script src="js/main.js"></script>
+
+       <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+       <script>
+           (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+           function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+           e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+           e.src='//www.google-analytics.com/analytics.js';
+           r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+           ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+       </script>
+      
+       <script>
+       window.onscroll = function() {myFunction()};
+
+       var navbar = document.getElementById("navbar");
+       var sticky = navbar.offsetTop;
+
+       function myFunction() {
+         if (window.pageYOffset >= sticky) {
+           navbar.classList.add("sticky")
+         } else {
+           navbar.classList.remove("sticky");
+         }
+       }
+       </script>
+       <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </html>
