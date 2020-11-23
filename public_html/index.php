@@ -96,7 +96,7 @@
 <div class="col-md-8">
     <div class="col-md-12">
     
-          <p><h3 class="nocleg">zapraszamy na nowe promocje </h1></p>
+          <p><h3 class="nocleg">Buty. Ostatnie wyprzedaże </h1></p>
     </div>
     
   
@@ -131,7 +131,7 @@
 <div class="col-md-8">
     <div class="col-md-12">
     
-          <p><h3 class="nocleg">Wyprzedaże - 100%!!! </h1></p>
+          <p><h3 class="nocleg">Narty.Nowości i Promocje </h1></p>
     </div>
     
   
@@ -196,39 +196,54 @@
 
         <div class="container-fluid">
             <!-- Example row of columns -->
-                <div class="row no-gutters">
+              <div class="row no-gutters">
                 
-              <div class="col-md-12 stopka">
+                  <div class="col-md-12 stopka">
               
-              <div class="col-md-4">
-                <p>Dane Kontaktowe:</p>
-                <p>Sklep Narciarski Web-Ski</p>
-                    <p>43-233 Zakopane</p>
-                <p>ul.Strzegoma 32</p>
+                        <div class="col-md-3">
+                           <h4>ZAPISZ SIĘ DO NEWSLETTERA</h4>
+                            <p>Możesz zrezygnować w każdej chwili. W tym celu należy odnaleźć szczegóły w naszej informacji prawnej.</p>
+                            <div >
+                              <input id="#" type="email" name="email" placeholder="Twój adres e-mail *" value="" required="">
+                              <svg class="#"><use xlink:href="#si-right-arrow-thin"></use></svg>
+                            </div>
+                  </div>
+                  <div class="col-md-3">
+                  <h4>O NAS</h4>
+                    <ul>
+                        <li><a href="#" title="">Nasza Firma</a></li>
+                        <li>praca</li>
+                        <li>serwis i wypożyczalnia</li>
+                        <li>sklep</li>
+                        <li>regulamin sklepu</li>
+                    </ul>
+                  </div>
                 
+                  <div class="col-md-3">
+                    <h4>STREFA KLIENTA</h4>
+                    <ul>
+                        <li>dane kontaktowe</li>
+                        <li>polityka prywatności</li>
+                        <li>dostawa i płatności</li>
+                        <li>reklamacje/zwroty/wymiany</li>
+                        <li>FAQ</li>
+                    </ul>
+                  </div>
+                    
+                  <div class="col-md-3">
+                      <h4>DANE KONTAKTOWE</h4>
+                      <p>Sklep Narciarski Web-Ski</p>
+                      <p>43-233 Zakopane</p>
+                      <p>ul.Strzegoma 32</p> 
+                
+                  </div>
+          
+                <div class="col-md-12 text-right">
+                  <p>Copyright © 2020 Web-Ski</p>
                 </div>
-                
-                
-                <div class="col-md-4">
-              <p>Partnerzy:</p>
-              <p>Skok Narciarski Czarna Dolina</p>
-          
-            </div>
-          
-          
-          
-            <div class="col-md-4">
-
-          
-            </div>
-          
-            <div class="col-md-12 text-right">
-              <p>Copyright © 2020 Web-Ski</p>
-          </div>
           </div>
           
-          </div>
-        </div> 
+      </div> 
 
         
 </footer>
