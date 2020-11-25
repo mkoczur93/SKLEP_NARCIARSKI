@@ -211,3 +211,76 @@ button:hover.nocleg {
  .sticky + .content {
    padding-top: 60px;
  }
+
+
+
+ .kontakt
+ {
+    padding-top:20px;
+    padding-bottom:20px;
+    margin-top:10px;
+    /*border: 2px solid black;*/
+    background-color: #2F3336;
+    color:white;
+ }
+ 
+h3.kontakt{
+ padding-top:0px;
+ padding-bottom:0px;
+ text-align: center;
+ border: 0px solid black;
+ font-weight: 800;
+ 
+}
+
+.textjakdojechac
+{
+   text-align: center;
+}
+
+.wysrodkuj
+{
+	width:900;
+	height:auto;
+	text-align:center;
+}
+
+.formularzNaglowek{
+
+   margin-top:30px;
+   text-align: center;
+   background-color: #2F3336;
+   color: white;
+}
+
+.formularz
+{
+   background-color: #2F3336;
+   color: black;
+   padding: 50px 40px;
+   display:block;
+	margin-left:auto;
+	margin-right:auto;
+
+   
+}
+.bialyNapis
+{
+   color:white;
+}
+
+.formularz Input[type=submit]
+{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:60px;
+	width:auto;	
+	font-weight:800;	
+   color:white;
+   background-color: #2F3336;
+	font-size:2vw;
+	text-align:center;
+	
+
+}
