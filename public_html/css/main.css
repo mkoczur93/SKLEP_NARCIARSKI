@@ -6,29 +6,18 @@
 
 
 body {
-     padding-top: 50px;
+    
      padding-bottom: 20px;
      background-image: url("../img/winter1.jpg");
 	 background-repeat: repeat
 	
      }
-    .menu
-    {
-        border: 4px solid #333;
-        padding: 6px;
-        border-radius: 7px
-    }
-    
-    .navbar-center
-    {
-        float:center ;
-    }
-    
+       
      .jumbotron
      {
      background-color: #86E6FF;    
      }
-    
+
 
 
 
@@ -80,9 +69,12 @@ h3.nocleg{
 img
 {
 	width: 100%;
-	height: auto;
-	
-	
+	height: auto;	
+}
+
+h2.center{
+   
+   text-align: center;
 }
 
 button.nocleg {
@@ -127,7 +119,168 @@ button:hover.nocleg {
 
 
 
+.instruktor
+	{
+      position: relative;
+	   padding-top:20px;
+	   padding-bottom:0px;
+	   margin-top:20px;
+	   /*border: 2px solid black;*/
+      background-color: #FFFFFF;
+      margin-bottom  :0px;
+	}
+   .menu_na_dole
+	{
+      
+	   padding-top:0px;
+	   padding-left:20px;
+      margin-top:0px;
+      /*margin-left:0px;*/
+	   border: 1px  black;
+      /*background-color: #FFFFFF;*/
+      margin-bottom  :0px;
+	}
+   .produkt
+	{
+      position: relative;
+	   padding-top:20px;
+	   padding-bottom:20px;
+	   margin-top:10px;
+	   /*border: 2px solid black;*/
+      background-color: #FFFFFF;
+      height: 85%;
+      width: 85%;
+	}
+  
+
+.instruktor-opis
+  { 
+  
+  text-align: justify;
+  margin-top: 20px;
+   
+
+}
+
+.menu{
+   background-color:#222;
+   margin-bottom: 0px;  
+   border-radius: 4px;
+   border: 1px solid transparent;
+}
+
+.navbar-inverse{
+
+   
+   margin-bottom: 0px;
+   border-radius: 0px;
+   border: 0px solid transparent
+}
+
+.dropstyle
+{
+   color: #888;
+   text-decoration: none;
+   background-color:#222;
+   
+}
+
+.dropstyle:hover
+{
+   text-decoration: none;
+   color:white;
+}
 
 
 
+ 
+ /* Page content */
+ .content {
+   padding: 16px;
+ }
+ 
+ /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+ .sticky {
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: 200;
+ }
+ 
+ /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+ .sticky + .content {
+   padding-top: 60px;
+ }
 
+
+
+ .kontakt
+ {
+    padding-top:20px;
+    padding-bottom:20px;
+    margin-top:10px;
+    /*border: 2px solid black;*/
+    background-color: #2F3336;
+    color:white;
+ }
+ 
+h3.kontakt{
+ padding-top:0px;
+ padding-bottom:0px;
+ text-align: center;
+ border: 0px solid black;
+ font-weight: 800;
+ 
+}
+
+.textjakdojechac
+{
+   text-align: center;
+}
+
+.wysrodkuj
+{
+	width:900;
+	height:auto;
+	text-align:center;
+}
+
+.formularzNaglowek{
+
+   margin-top:30px;
+   text-align: center;
+   background-color: #2F3336;
+   color: white;
+}
+
+.formularz
+{
+   background-color: #2F3336;
+   color: black;
+   padding: 50px 40px;
+   display:block;
+	margin-left:auto;
+	margin-right:auto;
+
+   
+}
+.bialyNapis
+{
+   color:white;
+}
+
+.formularz Input[type=submit]
+{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:60px;
+	width:auto;	
+	font-weight:800;	
+   color:white;
+   background-color: #2F3336;
+	font-size:2vw;
+	text-align:center;
+	
+
+}
