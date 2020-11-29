@@ -194,7 +194,8 @@
 
 <footer>
 
-        <div class="container-fluid">
+        <div class="container-fluid" style="background-color: #38465e; margin-top:20px;">
+        <div class="container" >
             <!-- Example row of columns -->
               <div class="row no-gutters">
                 
@@ -241,6 +242,7 @@
                 <div class="col-md-12 text-right">
                   <p>Copyright © 2020 Web-Ski</p>
                 </div>
+          </div>
           </div>
           
       </div> 
