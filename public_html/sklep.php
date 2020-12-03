@@ -36,7 +36,7 @@
 	 </div>
   </div>
 	
-	 <!--komentarz-->
+	 <!--komentarz>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -114,16 +114,15 @@
         
           <div class="row no-gutters">
 		
-    
-              <!--koszyk 
+            <div class="col-md-12">	
+
+              <!-- koszyk 
               <div class="col-md-12">
                 <figure>
                   <img src="img/sklep/koszyk.jpg" alt="koszyk" style="position:absolute;top:10px; right:50px; height:100px; width:100px;":>							
                 </figure>
               </div>
-              koszyk -->
-
-            <div class="col-md-12">	
+              koszyk  --> 	
     
               <div class="col-md-4">
                 <figure>
@@ -171,7 +170,7 @@
 
                       <div class="col-md-8">
                         <div class="col-md-12">	
-                          <p><h3 class="nocleg">Set narciarski Atomic 2390 Redster X9  M</h1></p>
+                          <p><h3 class="nocleg">Set narciarski Atomic 2390 Redster X9 S M</h1></p>
                         </div>	
                         <div class="col-md-12 instruktor-opis">                
                           <p> Narty Atomic Redster X9 S są idealne, jeśli chcesz trochę ścigać się w zawodach, 
