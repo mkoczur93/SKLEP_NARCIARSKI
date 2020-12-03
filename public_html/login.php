@@ -75,8 +75,8 @@
       <li><a href="http://localhost/sklep_narciarski/public_html/kameraonline.php">Kamera Online</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li class="active"><a href="http://localhost/sklep_narciarski/public_html/rejestracja.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="http://localhost/sklep_narciarski/public_html/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a href="http://localhost/sklep_narciarski/public_html/rejestracja.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li class="active"><a href="http://localhost/sklep_narciarski/public_html/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
   </div>
 </nav>
@@ -98,56 +98,19 @@
         <div class="row no-gutters">
 		
             <div class="col-md-12 ">
-                <div class="col-md-4"></div>
-                <div class="col-md-4 instruktor">	
-
-                    <p><h1 class="nocleg">Rejestracja</h1></p>
+                <div class="col-md-5"></div>
+                <div class="col-md-2 instruktor">	
                     
                     <div class="wstaw">
-                        <label> Imię <input type="text" name="imie" required></label>
-                        <div></div>
-                        <label> Drugie imie <input type="text" name="drugieimie"></label>
-                        <div></div>
-                        <label> Nazwisko <input type="text" name="nazwisko"required></label>
-                        <div></div>
-                        <label> Numer telefonu <input type="tel" name="telefon" required></label>
+                        <input type="email" name="adres" placeholder="adres e-mail" onfocus="this.paceholder=''" onblur="this.paceholder='adres e-mail'" required>
+                        <div></div></p>
+                        <input type="password" name="hasło" placeholder="hasło" onfocus="this.paceholder=''" onblur="this.paceholder='hasło'" required></label>
                     </div>
 
-                    <div class="wstaw">
-                    
-                        <label> Województwo <input type="text" name="wojewodztwo" required></label>
-                        <div></div>
-                        <label> Powiat <input type="text" name="powiat" required></label>
-                        <div></div>
-                        <label> Miasto <input type="text" name="miasto" required></label>
-                        <div></div>
-                        <label> Ulica <input type="text" name="Ulica" required></label>
-                        <div></div>
-                        <label> Numer domu <input type="text" name="nrdomu" required></label>
-                        <div></div>
-                        <label> Numer mieszkania <input type="text" name="nrmieszkania" ></label>
-                        <div></div>
-                        <label> Kod pocztowy <input type="text" name="kodpocztowy" required></label>
-
-                    
-                    </div>
-
-                    <div class="wstaw">
-                        <label> Data urodzenia <input type="date" name="data urodzenia" required></label>
-                    </div>
-
-                    <div class="wstaw">
-                        <label> Adres e-mail <input type="email" name="adres" required></label>
-                        <div></div>
-                        <label> Hasło <input type="password" name="hasło" required></label>
-                        <div></div>
-                        <label> Powtórz hasło <input type="password" name="powtorzhaslo" required></label>
-                    </div>
-
-                    <div class="col-md-4">
+                    <div class="col-md-1">
 						</div>
-						    <div class="col-md-8">
-							    <button class="nocleg" onclick="">Zarejestruj</button></p>
+						    <div class="col-md-9">
+							    <button class="nocleg" onclick="">Zaloguj</button></p>
 							</div>
                         </div>
                     </div>
