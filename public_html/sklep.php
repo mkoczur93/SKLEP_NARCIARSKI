@@ -115,13 +115,13 @@
           <div class="row no-gutters">
 		
     
-              koszyk 
+              <!--koszyk 
               <div class="col-md-12">
                 <figure>
                   <img src="img/sklep/koszyk.jpg" alt="koszyk" style="position:absolute;top:10px; right:50px; height:100px; width:100px;":>							
                 </figure>
               </div>
-              koszyk 
+              koszyk -->
 
             <div class="col-md-12">	
     
