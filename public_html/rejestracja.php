@@ -9,198 +9,274 @@
         <title>Serwis narciaski WEB-SKI</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/main.css">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
         
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-
+        <link rel="stylesheet" href="css/styles.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-
-
-        
-
+        <script src="https://kit.fontawesome.com/30b0a9457c.js" crossorigin="anonymous"></script>
     </head>
-	
-	
-	
-<header>
-<div class="container no-gutters">
-      <!-- Example row of columns -->
-      <div class="row no-gutters">
-	 <div class="col-md-12 logo">
-		<img src="img/logo.png" alt="Obrazek_noclegi">	
-		
-	 </div>
-	 </div>
-  </div>
-	
-	 <!--komentarz>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
 
+    <header>
 
-         <!--menu glowne-->
-         <div id="navbar">
-<div class="bg-dark container-fluid menu"> 
-    <div class="container" style="padding-left: 0px;padding-right: 0px;font-size: 12px;">
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-  
-    <ul class="nav navbar-nav" >
-      <li><a href="http://localhost/sklep_narciarski/public_html/index.php">Strona Główna</a></li>
-
-<!--Dropp menu-->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          Cennik
-        </a>
-        <div class="dropdown-menu dropstyle">
-          <a class="dropdown-item dropstyle"  href="http://localhost/sklep_narciarski/public_html/cennikWypozyczen.php">Cennik wypożyczeń</a>
-          <a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/cennikSprzetu.php">Cennik serwisu sprzętu</a>
-          <a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/cennikLekcji.php">Cennik lekcji z instruktorem</a>
+          <!--komentarz>
+              <!--[if lt IE 8]>
+                  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+              <![endif]-->
+              <div class="container no-gutters">
+            <!-- Example row of columns -->
+            <div class="row no-gutters">
+            <div class="col-md-12 logo">
+              <img src="img/logo.png" alt="Obrazek_noclegi">	
+              
+            </div>
         </div>
-      </li>
-<!--Dropp end-->
+        </div>
+        
+              <!--menu glowne-->
+              <div id="navbar">
+      <div class="bg-dark container-fluid menu "> 
+          <div class="container" style="padding-left: 0px;padding-right: 0px;font-size: 12px;">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+        
+          <ul class="nav navbar-nav" >
+            <li><a href="http://localhost/sklep_narciarski/public_html/index.php">Strona Główna</a></li>
 
-      <li><a href="http://localhost/sklep_narciarski/public_html/kontakt.php">Kontakt</a></li>
-      <li><a href="http://localhost/sklep_narciarski/public_html/sklep.php">Sklep</a></li>
-      <li><a href="http://localhost/sklep_narciarski/public_html/trasy.php">Trasy</a></li>
-      <li><a href="http://localhost/sklep_narciarski/public_html/instruktorzy.php">Instruktorzy</a></li>
-      <li><a href="http://localhost/sklep_narciarski/public_html/noclegi.php">Noclegi</a></li>
-      <li><a href="http://localhost/sklep_narciarski/public_html/restauracje.php">Restauracje</a></li>
-      <li><a href="http://localhost/sklep_narciarski/public_html/kameraonline.php">Kamera Online</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li class="active"><a href="http://localhost/sklep_narciarski/public_html/rejestracja.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="http://localhost/sklep_narciarski/public_html/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-  </div>
-</nav>
-</div>
-</div>
-</div>
-
-         <!--koniec menu glownego-->
-</header>
+      <!--Dropp menu-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                Cennik
+              </a>
+              <div class="dropdown-menu dropstyle">
+                <a class="dropdown-item dropstyle"  href="http://localhost/sklep_narciarski/public_html/cennikWypozyczen.php">Cennik wypożyczeń</a>
+                <a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/cennikSprzetu.php">Cennik serwisu sprzętu</a>
+                <a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/cennikLekcji.php">Cennik lekcji z instruktorem</a>
+              </div>
+            </li>
+      <!--Dropp end-->
 	
-	  
-	
+            <li><a href="http://localhost/sklep_narciarski/public_html/kontakt.php">Kontakt</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/sklep.php">Sklep</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/trasy.php">Trasy</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/instruktorzy.php">Instruktorzy</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/noclegi.php">Noclegi</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/restauracje.php">Restauracje</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/kameraonline.php">Kamera Online</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="http://localhost/sklep_narciarski/public_html/rejestracja.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+      </nav>
+      </div>
+      </div>
+      </div>
+         <!--koniec menu glownego -->
+    </header>
 
 	
 <body>
 
-    <div class="container">
-    <!-- Example row of columns -->
-        <div class="row no-gutters">
-		
-            <div class="col-md-12 ">
-                <div class="col-md-4"></div>
-                <div class="col-md-4 instruktor">	
+<div class="container">
+<div class="col-sm-12"  style="background-color: white; padding-bottom:70px; margin-top:0px;">
+<div class="login" style="background-color: white; max-width:500px !important;">
 
-                    <p><h1 class="nocleg">Rejestracja</h1></p>
-                    
-                    <div class="wstaw">
-                        <label> Imię <input type="text" name="imie" required></label>
-                        <div></div>
-                        <label> Drugie imie <input type="text" name="drugieimie"></label>
-                        <div></div>
-                        <label> Nazwisko <input type="text" name="nazwisko"required></label>
-                        <div></div>
-                        <label> Numer telefonu <input type="tel" name="telefon" required></label>
-                    </div>
-
-                    <div class="wstaw">
-                    
-                        <label> Województwo <input type="text" name="wojewodztwo" required></label>
-                        <div></div>
-                        <label> Powiat <input type="text" name="powiat" required></label>
-                        <div></div>
-                        <label> Miasto <input type="text" name="miasto" required></label>
-                        <div></div>
-                        <label> Ulica <input type="text" name="Ulica" required></label>
-                        <div></div>
-                        <label> Numer domu <input type="text" name="nrdomu" required></label>
-                        <div></div>
-                        <label> Numer mieszkania <input type="text" name="nrmieszkania" ></label>
-                        <div></div>
-                        <label> Kod pocztowy <input type="text" name="kodpocztowy" required></label>
-
-                    
-                    </div>
-
-                    <div class="wstaw">
-                        <label> Data urodzenia <input type="date" name="data urodzenia" required></label>
-                    </div>
-
-                    <div class="wstaw">
-                        <label> Adres e-mail <input type="email" name="adres" required></label>
-                        <div></div>
-                        <label> Hasło <input type="password" name="hasło" required></label>
-                        <div></div>
-                        <label> Powtórz hasło <input type="password" name="powtorzhaslo" required></label>
-                    </div>
-
-                    <div class="col-md-4">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3 style="text-align: center;padding-bottom:20px;">Zarejestruj się</h3>
+			</div>
+			<div class="card-body">
+ <div class="col-md-6">
+				<form>
+					<div class="input-group form-group" >
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class=""></i></span>
 						</div>
-						    <div class="col-md-8">
-							    <button class="nocleg" onclick="">Zarejestruj</button></p>
-							</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
+						<input type="text" class="form-control" placeholder="Nazwa użytkownika">
+						
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i></i></span>
+						</div>
+						<input type="password" class="form-control"  placeholder="Hasło" >
+					</div>
+					
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i></i></span>
+						</div>
+						<input type="password" class="form-control"  placeholder="Powtórz Hasło" >
+					</div>
+					
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class=""></i></span>
+						</div>
+						<input type="text" class="form-control"  placeholder="Imię" >
+					</div>				
+
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class=""></i></span>
+						</div>
+						<input type="text" class="form-control"  placeholder="Drugie Imie" >
+					</div>				
+
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class=""></i></span>
+						</div>
+						<input type="text" class="form-control"  placeholder="Nazwisko" >
+					</div>		
+					
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class=""></i></span>
+						</div>
+						<input type="tel" class="form-control"  placeholder="Telefon" >
+					</div>		
+</div>
+
+<div class="col-md-6">
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class=""></i></span>
+						</div>
+						<input type="text" class="form-control"  placeholder="Województwo" >
+					</div>	
+
+					
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class=""></i></span>
+						</div>
+						<input type="text" class="form-control"  placeholder="Powiat" >
+					</div>				
+
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class=""></i></span>
+						</div>
+						<input type="text" class="form-control"  placeholder="Miasto" >
+					</div>							
+					
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class=""></i></span>
+						</div>
+						<input type="text" class="form-control"  placeholder="Ulica" >
+					</div>							
+					
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class=""></i></span>
+						</div>
+						<input type="text" class="form-control"  placeholder="Powiat" >
+					</div>		
+					
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class=""></i></span>
+						</div>
+						<input type="text" class="form-control"  placeholder="Nr_domu" >
+					</div>		
+
+				
+
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class=""></i></span>
+						</div>
+						<input type="text" class="form-control"  placeholder="Kod Pocztowy" >
+					</div>							
+</div>				
+<div class="col-md-12" style="text-align: center">
+					<div class="form-group">
+						<input type="submit" value="Zarejestruj" class="btn float-right login_btn" >
+          </div>
+</div>
+				</form>
+			</div>
+			<div class="card-footer">
+				<div class="d-flex justify-content-center links">
+					Masz już konto?<a href="http://localhost/sklep_narciarski/public_html/login.php">Zaloguj się</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+
 
 <footer>
 
-    <div class="container-fluid">
-      <!-- Example row of columns -->
-     <div class="row no-gutters">
-	    
-		<div class="col-md-12 stopka">
-		
-		<div class="col-md-4">
-		 <p>Dane Kontaktowe:</p>
-		 <p>Sklep Narciarski Web-Ski</p>
-         <p>43-233 Zakopane</p>
-		 <p>ul.Strzegoma 32</p>
-		 
-		 </div>
-		 
-		 
-	    <div class="col-md-4">
-		<p>Partnerzy:</p>
-		<p>Skok Narciarski Czarna Dolina</p>
-	  
-	    </div>
-		
-		
-		
-		<div class="col-md-4">
+        <div class="container-fluid" style="background-color: #38465e; margin-top:20px;">
+        <div class="container" >
+            <!-- Example row of columns -->
+              <div class="row no-gutters">
+                
+                  <div class="col-md-12 stopka">
+              
+                        <div class="col-md-3">
+                           <h4>ZAPISZ SIĘ DO NEWSLETTERA</h4>
+                            <p>Możesz zrezygnować w każdej chwili. W tym celu należy odnaleźć szczegóły w naszej informacji prawnej.</p>
+                            <div >
+                              <input id="#" type="email" name="email" placeholder="Twój adres e-mail *" value="" required="">
+                              <svg class="#"><use xlink:href="#si-right-arrow-thin"></use></svg>
+                            </div>
+                  </div>
+                  <div class="col-md-3">
+                  <h4>O NAS</h4>
+                    <ul>
+                        <li><a href="#" title="">Nasza Firma</a></li>
+                        <li>praca</li>
+                        <li>serwis i wypożyczalnia</li>
+                        <li>sklep</li>
+                        <li>regulamin sklepu</li>
+                    </ul>
+                  </div>
+                
+                  <div class="col-md-3">
+                    <h4>STREFA KLIENTA</h4>
+                    <ul>
+                        <li>dane kontaktowe</li>
+                        <li>polityka prywatności</li>
+                        <li>dostawa i płatności</li>
+                        <li>reklamacje/zwroty/wymiany</li>
+                        <li>FAQ</li>
+                    </ul>
+                  </div>
+                    
+                  <div class="col-md-3">
+                      <h4>DANE KONTAKTOWE</h4>
+                      <p>Sklep Narciarski Web-Ski</p>
+                      <p>43-233 Zakopane</p>
+                      <p>ul.Strzegoma 32</p> 
+                
+                  </div>
+          
+                <div class="col-md-12 text-right">
+                  <p>Copyright © 2020 Web-Ski</p>
+                </div>
+          </div>
+          </div>
+          
+      </div> 
 
-	  
-	    </div>
-		
-		<div class="col-md-12 text-right">
-				<p>Copyright © 2020 Web-Ski</p>
-		</div>
-		</div>
-		
-	  </div>
-	</div>
-	  
-	  
-	  
-	  
-	  
-	  
+        
 </footer>
+</body>
+
+
      <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
