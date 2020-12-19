@@ -9,8 +9,8 @@
     }
 
 
-    echo "widaj";
-
+    echo "witaj admin ";
+    echo "<br></br>";
     echo '<a href="wyloguj.php">Wyloguj się!</a>';
 
 ?>
