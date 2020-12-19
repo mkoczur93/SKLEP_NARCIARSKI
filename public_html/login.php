@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+
+if ((isset($_SESSION['zalogowany'])) && ($_SESSION['zalogowany']==true))
+{
+	header('Location: admin.php');
+	exit();
+}
+
+?>
+
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -91,25 +103,30 @@
 				<h3>Zaloguj się</h3>
 			</div>
 			<div class="card-body">
-				<form>
+				<form action="zaloguj.php" method="post">
 					<div class="input-group form-group" >
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input type="text" class="form-control" placeholder="Nazwa użytkownika">
+						<input type="text"  name="login" class="form-control" placeholder="Nazwa użytkownika">
 						
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-						<input type="password" class="form-control"  placeholder="Hasło" >
+						<input type="password" name="haslo" class="form-control"   placeholder="Hasło" >
 					</div>
+
 
 					<div class="form-group">
 						<input type="submit" value="Zaloguj" class="btn float-right login_btn" style="width:92%">
 					</div>
+
 				</form>
+<?php
+	if(isset($_SESSION['blad']))	echo $_SESSION['blad'];
+?>
 			</div>
 			<div class="card-footer">
 				<div class="d-flex justify-content-center links">

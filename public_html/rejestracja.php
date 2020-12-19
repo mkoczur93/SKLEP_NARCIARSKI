@@ -84,7 +84,7 @@
 
 <div class="container">
 <div class="col-sm-12"  style="background-color: white; padding-bottom:70px; margin-top:0px;">
-<div class="login" style="background-color: white; max-width:500px !important;">
+<div class="login" style="background-color: white; max-width:500px !important;min-height:600px !important;">
 
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">
@@ -174,12 +174,7 @@
 						<input type="text" class="form-control"  placeholder="Ulica" >
 					</div>							
 					
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class=""></i></span>
-						</div>
-						<input type="text" class="form-control"  placeholder="Powiat" >
-					</div>		
+	
 					
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
@@ -196,7 +191,10 @@
 						</div>
 						<input type="text" class="form-control"  placeholder="Kod Pocztowy" >
 					</div>							
-</div>				
+			
+
+
+</div>
 <div class="col-md-12" style="text-align: center">
 					<div class="form-group">
 						<input type="submit" value="Zarejestruj" class="btn float-right login_btn" >
@@ -204,7 +202,7 @@
 </div>
 				</form>
 			</div>
-			<div class="card-footer">
+			<div class="col-md-12 card-footer">
 				<div class="d-flex justify-content-center links">
 					Masz już konto?<a href="http://localhost/sklep_narciarski/public_html/login.php">Zaloguj się</a>
 				</div>
