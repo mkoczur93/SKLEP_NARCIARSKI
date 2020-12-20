@@ -26,7 +26,7 @@
 	
 	
 <header>
-<div class="container no-gutters">
+<div class="container no-gutters"> 
       <!-- Example row of columns -->
       <div class="row no-gutters">
 	 <div class="col-md-12 logo">
@@ -99,15 +99,16 @@
       <div class="col-md-12 instruktor">		
 		
         <div class="col-md-3">
-          <form action="" method="post">
-            <legend> kategorie </legend>
-              <div><label><input type="radio" value="1" name="kategoria"> Obuwie </label></div>
-              <div><label><input type="radio" value="2" name="kategoria"> Narty </label></div>
-              <div><label><input type="radio" value="3" name="kategoria"> Czappki </label></div>
-              <div><label><input type="radio" value="4" name="kategoria"> Spodnie </label></div>
-              <div><label><input type="radio" value="5" name="kategoria"> Kurtki </label></div>
-              <div><label><input type="radio" value="6" name="kategoria"> karnety </label></div>
-          </form>
+       
+            <form action="sklep.php" method="get">
+              <button class="kategorie" style="background-color:white; border: solid grey 1px; width:100%;display: inline-block;padding: 10px 0px;"  name="Obuwie" type="submit" value="Obuwie">Obuwie</button>
+              <button class="kategorie" style="background-color:white; border: solid grey 1px;border-top: solid grey 0px; width:100%;display: inline-block;padding: 10px 0px" name="Narty" type="submit" value="Narty">Narty</button>
+              <button class="kategorie" style="background-color:white; border: solid grey 1px;border-top: solid grey 0px; width:100%;display: inline-block;padding: 10px 0px" name="Czapki" type="submit" value="Czapki">Czapki</button>
+              <button class="kategorie" style="background-color:white; border: solid grey 1px;border-top: solid grey 0px; width:100%;display: inline-block;padding: 10px 0px" name="Spodnie" type="submit" value="Spodnie">Spodnie</button>
+              <button class="kategorie" style="background-color:white; border: solid grey 1px;border-top: solid grey 0px; width:100%;display: inline-block;padding: 10px 0px" name="Kurtki" type="submit" value="Kurtki">Kurtki</button>
+              <button class="kategorie" style="background-color:white; border: solid grey 1px;border-top: solid grey 0px; width:100%;display: inline-block;padding: 10px 0px" name="Karnety" type="submit" value="Karnety">Karnety</button>
+            </form>
+            
 		    </div>
         
 		    <div class="col-md-9">
@@ -125,9 +126,13 @@
               koszyk  --> 	
     
               <div class="col-md-4">
+                <div style="max-height:382px;">
+                <div style="margin-top:25%;">
                 <figure>
-                  <img src="img/sklep/but-meski.jpg" alt="buty meskie">							
+                  <img src="img\img_b\buty-narciarskie-srace-60t-l-race-bacid-greeblack-l40896300-salomon.jpg" alt="buty meskie">							
                 </figure>
+                </div>
+                </div>
               </div>
 
               <div class="col-md-8">
@@ -161,12 +166,15 @@
                   <div class="row no-gutters">  
                     <div class="col-md-12 " >		
 	
-
-                      <div class="col-md-4">
-                        <figure>
-                          <img src="img/sklep/narty-meskie.jpg" alt="narty meskie">							
-                        </figure>
-                      </div>
+                    <div class="col-md-4">
+                <div style="max-height:382px;">
+                <div style="margin-top:25%;">
+                <figure>
+                          <img src="img\img_n\set-narciarski-rossignol-01li-react-r4-sport-m.jpg" alt="narty meskie">							
+                          </figure>
+                </div>
+                </div>
+              </div>
 
                       <div class="col-md-8">
                         <div class="col-md-12">	

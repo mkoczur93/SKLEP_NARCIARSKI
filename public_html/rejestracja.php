@@ -325,7 +325,9 @@
 
 <div class="container">
 <div class="col-sm-12"  style="background-color: white; padding-bottom:70px; margin-top:0px;">
+
 <div class="login" style="background-color: white; max-width:500px !important;min-height:700px !important;">
+
 
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">
@@ -484,6 +486,7 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class=""></i></span>
 						</div>
+
 						<input type="text" name="ulica" class="form-control"  placeholder="Ulica" >
             <?php
               if (isset($_SESSION['e_ulica']))
@@ -508,6 +511,7 @@
             ?>  
 					</div>						
 
+
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class=""></i></span>
@@ -526,6 +530,7 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class=""></i></span>
 						</div>
+
 						<input type="text" name="email" class="form-control"  placeholder="e-mail" >
               <?php
               if (isset($_SESSION['e_email']))
@@ -535,6 +540,7 @@
                 }
             ?>		
 					</div>	
+
 
 
 </div>
