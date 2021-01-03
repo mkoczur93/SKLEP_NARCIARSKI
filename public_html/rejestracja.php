@@ -188,12 +188,6 @@
           $dodaj1 = $idadres['id_adres'];
           $dodaj2= $iduzytkownik['id_uzytk'];
           
-         //if ($polaczenie->connect_errno!=0)
-          //{
-            //throw new Exception(mysqli_connect_errno());
-          //}
-          //else
-          //{
           $dodaj1 = $dodaj1 + 1;
           $dodaj2 = $dodaj2 + 1;
           $user = "user";
@@ -207,8 +201,6 @@
 
 					if ($polaczenie->query($dodawaniedanych1) && $polaczenie->query($dodawaniedanych2) )
 					{
-
-           // "INSERT INTO uzytkownicy VALUES (NULL, '$nick', '$haslo_hash', '$email', 100, 100, 100, 14)"
             
             mysqli_query($polaczenie, $dodawaniedanych1);
             mysqli_query($polaczenie, $dodawaniedanych2);

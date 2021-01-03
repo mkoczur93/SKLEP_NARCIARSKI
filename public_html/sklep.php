@@ -1,3 +1,11 @@
+<?php
+
+			
+
+?>
+
+
+
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -91,6 +99,45 @@
 
 	
 <body>
+<?php
+
+
+require_once "connect.php";
+
+	$polaczenie = new mysqli($host, $user, $password, $dbname);
+	
+	if ($polaczenie->connect_errno!=0)
+	{
+        echo "Error: ".$polaczenie->connect_errno;
+  }
+	else
+	{
+				
+		if ($ilosc_prod = $polaczenie->query(sprintf("SELECT * FROM produkt")))
+		{
+      $ile_produktów1= $ilosc_prod->num_rows;
+      $rezultat1 = mysqli_query($polaczenie, "SELECT * FROM produkt");
+      $rezultat2 = mysqli_query($polaczenie, "SELECT * FROM zdjecia");
+
+			if($ile_produktów1>0)
+			{
+        $wiersz1 = $rezultat1->fetch_assoc();
+        $wiersz2 = $rezultat2->fetch_assoc();
+
+			#	$dane['id_produkt'] = $wiersz1['id_produkt'];
+			#	$dane['nazwa'] = $wiersz1['nazwa'];
+			#	$dane['cena'] = $wiersz1['cena'];
+			#	$dane['rozmiar'] = $wiersz1['rozmiar'];
+			#	$dane['opis'] = $wiersz1['opis'];
+			#	$dane['ilosc'] = $wiersz1['ilosc'];
+			#	$dane['osoba_id_kategoria'] = $wiersz1['osoba_id_kategoria'];
+      # $dane['przeznacz_id_przeznacz'] = $wiersz1['przeznacz_id_przeznacz'];
+      #	$dane['prod_rodz_id_prod_rodz'] = $wiersz1['prod_rodz_id_prod_rodz'];
+			#	$dane['id_zdjecia'] = $wiersz2['id_zdjecia'];
+      # $dane['nazwa_zdjecia'] = $wiersz2['nazwa_zdjecia'];
+      # $dane['produkt_id_produkt'] = $wiersz2['produkt_id_produkt'];
+        
+echo<<<END
 
   <div class="container">
     <!-- Example row of columns -->
@@ -100,114 +147,93 @@
 		
         <div class="col-md-3">
        
-            <form action="sklep.php" method="get">
-              <button class="kategorie" style="background-color:white; border: solid grey 1px; width:100%;display: inline-block;padding: 10px 0px;"  name="Obuwie" type="submit" value="Obuwie">Obuwie</button>
-              <button class="kategorie" style="background-color:white; border: solid grey 1px;border-top: solid grey 0px; width:100%;display: inline-block;padding: 10px 0px" name="Narty" type="submit" value="Narty">Narty</button>
-              <button class="kategorie" style="background-color:white; border: solid grey 1px;border-top: solid grey 0px; width:100%;display: inline-block;padding: 10px 0px" name="Czapki" type="submit" value="Czapki">Czapki</button>
-              <button class="kategorie" style="background-color:white; border: solid grey 1px;border-top: solid grey 0px; width:100%;display: inline-block;padding: 10px 0px" name="Spodnie" type="submit" value="Spodnie">Spodnie</button>
-              <button class="kategorie" style="background-color:white; border: solid grey 1px;border-top: solid grey 0px; width:100%;display: inline-block;padding: 10px 0px" name="Kurtki" type="submit" value="Kurtki">Kurtki</button>
-              <button class="kategorie" style="background-color:white; border: solid grey 1px;border-top: solid grey 0px; width:100%;display: inline-block;padding: 10px 0px" name="Karnety" type="submit" value="Karnety">Karnety</button>
-            </form>
+          <form action="sklep.php" method="get">
+            <button class="kategorie" style="background-color:white; border: solid grey 1px; width:100%;display: inline-block;padding: 10px 0px;"  name="Obuwie" type="submit" value="Obuwie">Obuwie</button>
+            <button class="kategorie" style="background-color:white; border: solid grey 1px;border-top: solid grey 0px; width:100%;display: inline-block;padding: 10px 0px" name="Narty" type="submit" value="Narty">Narty</button>
+            <button class="kategorie" style="background-color:white; border: solid grey 1px;border-top: solid grey 0px; width:100%;display: inline-block;padding: 10px 0px" name="Czapki" type="submit" value="Czapki">Czapki</button>
+            <button class="kategorie" style="background-color:white; border: solid grey 1px;border-top: solid grey 0px; width:100%;display: inline-block;padding: 10px 0px" name="Spodnie" type="submit" value="Spodnie">Spodnie</button>
+            <button class="kategorie" style="background-color:white; border: solid grey 1px;border-top: solid grey 0px; width:100%;display: inline-block;padding: 10px 0px" name="Kurtki" type="submit" value="Kurtki">Kurtki</button>
+            <button class="kategorie" style="background-color:white; border: solid grey 1px;border-top: solid grey 0px; width:100%;display: inline-block;padding: 10px 0px" name="Karnety" type="submit" value="Karnety">Karnety</button>
+          </form>
             
-		    </div>
-        
-		    <div class="col-md-9">
-        
-          <div class="row no-gutters">
-		
-            <div class="col-md-12">	
+        </div>
 
-              <!-- koszyk 
-              <div class="col-md-12">
-                <figure>
-                  <img src="img/sklep/koszyk.jpg" alt="koszyk" style="position:absolute;top:10px; right:50px; height:100px; width:100px;":>							
-                </figure>
-              </div>
-              koszyk  --> 	
-    
-              <div class="col-md-4">
-                <div style="max-height:382px;">
-                <div style="margin-top:25%;">
-                <figure>
-                  <img src="img\img_b\buty-narciarskie-srace-60t-l-race-bacid-greeblack-l40896300-salomon.jpg" alt="buty meskie">							
-                </figure>
-                </div>
-                </div>
-              </div>
+        <div class="col-md-9">
+END;
 
-              <div class="col-md-8">
-                <div class="col-md-12">	
-                  <p><h3 class="nocleg">Buty narciarskie Tecnica 3100 Mach1 130 LV M</h1></p>
-                </div>	
-                <div class="col-md-12 instruktor-opis">                
-                  <p> Mach1 LV 130 to ulepszone męskie buty narciarskie. 
-                  Polecane są ambitnym zawodnikom, do szybkiej jazdy. Buty o twardym flexie przy jednocześnie 
-                  bardzo wysokiej stabilności, łatwej kontroli przy osiąganiu większych prędkości. Aby zapewnić 
-                  wygodne użytkowanie podczas całodniowego przebywania na stoku, producent zastosował wiele 
-                  wspomagających technologii. Ruchoma cholewka sprawia, że użytkowanie jest komfortowe zarówno podczas jazdy,
-                  jak i chodzenia. Wewnętrzna anatomiczna wkładka zmniejsza odczucie skrępowanych nóg, dając jednocześnie 
-                  możliwość większej swobody. To idealnie dopasowujące się do stopy buty, które bardzo pozytywnie zaskoczą 
-                  Cię na stoku i doskonale sprawdzą się w każdej sytuacji. Dodatkowym udogodnieniem jest łatwy system zakładania i zdejmowania. 
-                  </p>
-                               
-                </div>
-              </div>
-              
-            </div>
-            <div class="col-md-9"></div>
-							  <div class="col-md-3">
-							    <button class="nocleg" onclick="">Dodaj do koszyka</button></p>
-							  </div>
-            </div>
+          while(($dane = mysqli_fetch_array($rezultat1)) && ($dane1 = mysqli_fetch_array($rezultat2))) 
+          { 
+            $zdjecie = "img/zjecia/".$dane1['nazwa'];
+  
+echo<<<END
 
-            <!--kolejny prod -->
+            <div class="col-md-12">
+              <div class="row no-gutters">
+                
+                <div class="col-md-12">
+      
+                  <!--kolejny prod -->
+                
+                  <div class="col-md-4">
+                    <div style="max-height:382px;">
+                      <div style="margin-top:25%;">
+                        <figure>
+END;
 
-                <div class="col-md-12 " >		
-                  <div class="row no-gutters">  
-                    <div class="col-md-12 " >		
-	
-                    <div class="col-md-4">
-                <div style="max-height:382px;">
-                <div style="margin-top:25%;">
-                <figure>
-                          <img src="img\img_n\set-narciarski-rossignol-01li-react-r4-sport-m.jpg" alt="narty meskie">							
-                          </figure>
-                </div>
-                </div>
-              </div>
+                          echo"<img src=img/zdjecia/".$dane1['nazwa']." alt=".$dane1['nazwa'].">";			
+echo<<<END
 
-                      <div class="col-md-8">
-                        <div class="col-md-12">	
-                          <p><h3 class="nocleg">Set narciarski Atomic 2390 Redster X9 S M</h1></p>
-                        </div>	
-                        <div class="col-md-12 instruktor-opis">                
-                          <p> Narty Atomic Redster X9 S są idealne, jeśli chcesz trochę ścigać się w zawodach, 
-                          a przez resztę czasu szybko jeździć na stoku. Jedną z ich kluczowych cech jest innowacja 
-                          klasy Pucharze Świata - Servotec, która sprawia, że narty są bardziej zwrotne na zakrętach 
-                          i stabilniejsze na prostych. Dodatkowo posiadają geometrię Multi Radius Sidecut, będącą taliowaniem, 
-                          które jest kompromisem między slalomem gigantem a slalomem. Rozwiązanie równie dobre zarówno na krótkie, 
-                          jak i długie skręty. Wszystko, czego potrzebujesz, aby szaleć na stoku przez cały sezon! 
-                          Wiązanie Atomic X 12 TL RS to idealna propozycja dla osób, które oczekują profesjonalnych osiągów 
-                          i możliwości dopasowania bez użycia narzędzi. Model X 12 TL RS ze ski stoperami 75 mm i technologią 
-                          Full Flex zapewnia idealne przenoszenie siły i wyjątkową kontrolę nad nartami, a przede – niesamowite 
-                          prędkości i łatwe dopasowanie bez konieczności używania narzędzi. WAGA: 3256 G / dla długości 175 cm. 
-                          </p>
-                                      
-                        </div>
+                        </figure>
                       </div>
                     </div>
                   </div>
-                </div> 
-                <div class="col-md-12" >		
-                  <div class="col-md-9"></div>
-                  <div class="col-md-3">
-                    <button class="nocleg" onclick="">Dodaj do koszyka</button></p>
+
+                  <div class="col-md-8">
+                    <div class="col-md-12">
+END;
+
+                      echo"<p><h3 class='nocleg'>".$dane['nazwa']."</h1></p>";
+echo<<<END
+
+                    </div>
+                  <div class="col-md-12 instruktor-opis">
+END;
+
+                    echo "<p>".$dane['opis']."</p>";
+echo<<<END
+
                   </div>
                 </div>
+                
+              </div>
+              <div class="col-md-9"></div>
+              <div class="col-md-3">
+                <button class="nocleg" onclick="">"Dodaj do koszyka"</button></p>
+              </div>
+            </div>
           </div>
+END;
+
+        }
+echo<<<END
+
         </div>
+        </div>
+
       </div>
+    </div>
   </div>
+END;
+} else {
+					
+  $dane['blad'] = '<span style="color:red">Nieprawidłowy login lub hasło!</span>';					
+}
+
+}
+    
+$polaczenie->close();
+}
+?>
 </body>
 
 <footer>
