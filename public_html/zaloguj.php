@@ -39,7 +39,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 			#	$_SESSION['id_uzytk'] = $wiersz['id_uzytk'];
 			#	$_SESSION['nazwa'] = $wiersz['nazwa'];
 			#	$_SESSION['nazwisko'] = $wiersz['nazwisko'];
-			#	$_SESSION['imie'] = $wiersz['imie'];
+				$_SESSION['imie'] = $wiersz['imie'];
 			#	$_SESSION['imie_1'] = $wiersz['imie_1'];
 				$_SESSION['rodzaj_u'] = $wiersz['rodzaj_u'];
 			#	$_SESSION['status'] = $wiersz['status'];
