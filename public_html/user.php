@@ -9,9 +9,7 @@
     }
 
 	$imie = $_SESSION['imie'];
-    echo "witaj user ";
-    echo "<br></br>";
-    echo '<a href="wyloguj.php">Wyloguj się!</a>';
+
 
 ?>
 

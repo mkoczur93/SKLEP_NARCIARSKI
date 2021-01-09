@@ -150,6 +150,9 @@
 		
 	}
 	
+		$imie = $_SESSION['imie'];
+
+	
 	
 ?>
 
@@ -176,6 +179,7 @@
         <script src="https://kit.fontawesome.com/30b0a9457c.js" crossorigin="anonymous"></script>
     </head>
 
+   
     <header>
 
           <!--komentarz>
@@ -200,13 +204,56 @@
         <div class="container-fluid">
         
           <ul class="nav navbar-nav" >
-            <li><a href="http://localhost/sklep_narciarski/public_html/admin.php">Strona Główna</a></li>
+            <li class="active"><a href="http://localhost/sklep_narciarski/public_html/admin.php">Strona Główna</a></li>
 
-            <li class="active"><a href="http://localhost/sklep_narciarski/public_html/Nprodukt.php">Dodaj produkt</a></li>
+      <!--Dropp menu-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                Cennik
+              </a>
+              <div class="dropdown-menu dropstyle">
+                <a class="dropdown-item dropstyle"  href="http://localhost/sklep_narciarski/public_html/cennikWypozyczenAdmin.php">Cennik wypożyczeń</a>
+                <a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/cennikSprzetuAdmin.php">Cennik serwisu sprzętu</a>
+                <a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/cennikLekcjiAdmin.php">Cennik lekcji z instruktorem</a>
+              </div>
+            </li>
+      <!--Dropp end-->
 
+            <li><a href="http://localhost/sklep_narciarski/public_html/kontaktAdmin.php">Kontakt</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/sklepAdmin.php">Sklep</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/trasyAdmin.php">Trasy</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/instruktorzyAdmin.php">Instruktorzy</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/noclegiAdmin.php">Noclegi</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/restauracjeAdmin.php">Restauracje</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/kameraonlineAdmin.php">Kamera Online</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="http://localhost/sklep_narciarski/public_html/wyloguj.php"><span class="glyphicon glyphicon-user"></span>wyloguj się</a></li>
+			
+			<!--Drop menu -->
+			
+			
+			   <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                Profil
+              </a>
+              <div class="dropdown-menu dropstyle">
+			    <a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/Nprodukt.php">Dodaj Produkt</br></a>
+				<a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/ZamowieniaUser.php">Historia Zamowien</a>
+                <a class="dropdown-item dropstyle"  href="http://localhost/sklep_narciarski/public_html/EdytujProfilUser.php">Edycja Profilu</a>
+
+              </div>
+            </li>
+			
+			
+			<!--Drop menu end -->
+			
+			
+				
+			
+			
+		    <li><a>Witaj <?php echo $imie ?></a></li>
+            <li><?php echo '<a href="wyloguj.php">Wyloguj się!</a>' ?></li>
+
           </ul>
         </div>
       </nav>

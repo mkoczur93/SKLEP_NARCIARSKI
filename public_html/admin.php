@@ -8,6 +8,9 @@
         exit();
     }
 
+	$imie = $_SESSION['imie'];
+
+
 ?>
 
 
@@ -24,8 +27,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        
+        <link rel="stylesheet" href="css/bootstrap.min.css">        
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
 
@@ -59,11 +61,54 @@
           <ul class="nav navbar-nav" >
             <li class="active"><a href="http://localhost/sklep_narciarski/public_html/admin.php">Strona Główna</a></li>
 
-            <li><a href="http://localhost/sklep_narciarski/public_html/Nprodukt.php">Dodaj produkt</a></li>
+      <!--Dropp menu-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                Cennik
+              </a>
+              <div class="dropdown-menu dropstyle">
+                <a class="dropdown-item dropstyle"  href="http://localhost/sklep_narciarski/public_html/cennikWypozyczenAdmin.php">Cennik wypożyczeń</a>
+                <a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/cennikSprzetuAdmin.php">Cennik serwisu sprzętu</a>
+                <a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/cennikLekcjiAdmin.php">Cennik lekcji z instruktorem</a>
+              </div>
+            </li>
+      <!--Dropp end-->
 
+            <li><a href="http://localhost/sklep_narciarski/public_html/kontaktAdmin.php">Kontakt</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/sklepAdmin.php">Sklep</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/trasyAdmin.php">Trasy</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/instruktorzyAdmin.php">Instruktorzy</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/noclegiAdmin.php">Noclegi</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/restauracjeAdmin.php">Restauracje</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/kameraonlineAdmin.php">Kamera Online</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="http://localhost/sklep_narciarski/public_html/wyloguj.php"><span class="glyphicon glyphicon-user"></span>wyloguj się</a></li>
+			
+			<!--Drop menu -->
+			
+			
+			   <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                Profil
+              </a>
+              <div class="dropdown-menu dropstyle">
+			    <a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/Nprodukt.php">Dodaj Produkt</br></a>
+				<a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/ZamowieniaUser.php">Historia Zamowien</a>
+                <a class="dropdown-item dropstyle"  href="http://localhost/sklep_narciarski/public_html/EdytujProfilUser.php">Edycja Profilu</a>
+
+              </div>
+            </li>
+			
+			
+			<!--Drop menu end -->
+			
+			
+				
+			
+			
+		    <li><a>Witaj <?php echo $imie ?></a></li>
+            <li><?php echo '<a href="wyloguj.php">Wyloguj się!</a>' ?></li>
+
           </ul>
         </div>
       </nav>
@@ -75,15 +120,115 @@
 
 <body>
 
-    <div class="container">
+  <div class="container">
      <!-- Example row of columns -->
-        <div class="row no-gutters">
-            <div class="col-md-12 nocleg ">		
+    <div class="row no-gutters">
+    <div class="col-md-12 nocleg ">		
 		
-             
-            </div>
-        </div>               
+    <div class="col-md-4">
+    <figure>
+    <img src="img\img_b\buty-narciarskie-salomon-8739-s-pro-90-m.jpg"  alt="Obrazek_buta">						
+    </figure>
+
+
+</div>
+<div class="col-md-8">
+    <div class="col-md-12">
+    
+          <p><h3 class="nocleg">Buty. Ostatnie wyprzedaże </h1></p>
     </div>
+    
+  
+    <div class="col-md-12">
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+                            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
+                            and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                            leap into electronic typesetting, remaining essential. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                            type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                            electronic typesetting, remaining essential . </p>
+    </div>
+    
+    <div class="col-md-12">
+    <div class="col-md-9">
+      </div>
+        <div class="col-md-3">
+        <button class="nocleg" onclick="window.location.href='# ';">przejdź do sklepu</button></p>
+        </div>
+      </div>
+     </div>
+ </div>
+  <div class="col-md-12 nocleg ">		
+		
+    <div class="col-md-4">
+    <figure>
+    <img src="img\img_n\set-narciarski-rossignol-01li-react-r4-sport-m.jpg"  alt="Obrazek_buta">						
+    </figure>
+    
+
+</div>
+<div class="col-md-8">
+    <div class="col-md-12">
+    
+          <p><h3 class="nocleg">Narty.Nowości i Promocje </h1></p>
+    </div>
+    
+  
+    <div class="col-md-12">
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+                            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
+                            and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                            leap into electronic typesetting, remaining essential. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                            type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                            electronic typesetting, remaining essential . </p>
+    </div>
+    
+    <div class="col-md-12">
+    <div class="col-md-9">
+      </div>
+        <div class="col-md-3">
+        <button class="nocleg" onclick="window.location.href='# ';">przejdź do sklepu</button></p>
+        </div>
+      </div>
+     </div>
+ </div>
+   <!--   następny    -->
+                      <div class="col-md-12 instruktor" >
+                                <div class="col-md-3 menu_na_dole">
+                                
+                                    <h2 class="center"><i class="fas fa-tools "></i><br></br> Montujemy wiązania</h2>
+                                    
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
+                                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the </p>
+                                    <p><a class="btn btn-default" href="#" role="button">szczegóły &raquo;</a></p>
+                                </div>
+                                <div class="col-md-3 menu_na_dole">
+                                    <h2 class="center"><i class="fas fa-question"></i> <br></br>Jak dobrać sprzęt?</h2>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
+                                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the </p>
+                                    <p><a class="btn btn-default" href="#" role="button">szczegóły &raquo;</a></p>
+                                </div>
+                                <div class="col-md-3 menu_na_dole">
+                                    <h2 class="center"><i class="fas fa-crosshairs"></i><br></br>Porady specjalistów</h2>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
+                                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the </p>
+                                    <p><a class="btn btn-default" href="#" role="button">szczegóły &raquo;</a></p>
+                                  </div>
+                               <div class="col-md-3  menu_na_dole">
+                                    <h2 class="center"><i class="fas fa-truck"><br></br></i>Natychmiastowa wysyłka</h2>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
+                                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the </p>
+                                    <p><a class="btn btn-default" href="#" role="button">szczegóły &raquo;</a></p>
+                               </div>
+                  </div>                    
+      </div>
+    </div>               
+  </div>
 </body>
 
 <footer>
