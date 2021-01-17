@@ -95,7 +95,7 @@
 				
 				if ($wszystko_OK==true)
 				{
-					//Hurra, wszystkie testy zaliczone, dodajemy gracza do bazy
+					//Hurra, wszystkie testy zaliczone, dodajemy produkt do bazy
                     $idprodukt = mysqli_query($polaczenie, "SELECT id_produkt FROM produkt order by id_produkt DESC limit 1");
                     $idzdjecie = mysqli_query($polaczenie, "SELECT id_zdjecia FROM zdjecia order by id_zdjecia DESC limit 1");
 
@@ -121,6 +121,7 @@
                         mysqli_query($polaczenie, $dodawaniedanych2);
 
                         //Usuwanie błędów rejestracji
+
                         if (isset($_SESSION['e_nazwa'])) unset($_SESSION['e_nazwa']);
                         if (isset($_SESSION['e_cena'])) unset($_SESSION['e_cena']);
                         if (isset($_SESSION['e_opis'])) unset($_SESSION['e_opis']);
@@ -152,7 +153,7 @@
 	
 		$imie = $_SESSION['imie'];
 
-	
+	// koniec dodawania
 	
 ?>
 
@@ -237,9 +238,9 @@
                 Profil
               </a>
               <div class="dropdown-menu dropstyle">
-			    <a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/Nprodukt.php">Dodaj Produkt</br></a>
-				<a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/ZamowieniaUser.php">Historia Zamowien</a>
-                <a class="dropdown-item dropstyle"  href="http://localhost/sklep_narciarski/public_html/EdytujProfilUser.php">Edycja Profilu</a>
+			    <a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/Nprodukt.php">Dodaj produkt</br></a>
+				<a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/ZamowieniaUser.php">Historia zamowien</a>
+                <a class="dropdown-item dropstyle"  href="http://localhost/sklep_narciarski/public_html/EdytujProfilUser.php">Edycja profilu</a>
 
               </div>
             </li>
