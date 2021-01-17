@@ -52,7 +52,7 @@
       <li><a href="http://localhost/sklep_narciarski/public_html/index.php">Strona Główna</a></li>
 
 <!--Dropp menu-->
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown active">
         <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
           Cennik
         </a>
@@ -70,7 +70,7 @@
 	  <li><a href="http://localhost/sklep_narciarski/public_html/instruktorzy.php">Instruktorzy</a></li>
       <li><a href="http://localhost/sklep_narciarski/public_html/noclegi.php">Noclegi</a></li>
       <li><a href="http://localhost/sklep_narciarski/public_html/restauracje.php">Restauracje</a></li>
-      <li class="active"><a href="http://localhost/sklep_narciarski/public_html/kameraonline.php">Kamera Online</a></li>
+      <li><a href="http://localhost/sklep_narciarski/public_html/kameraonline.php">Kamera Online</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="http://localhost/sklep_narciarski/public_html/rejestracja.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
