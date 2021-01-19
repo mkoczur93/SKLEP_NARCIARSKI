@@ -123,19 +123,6 @@ require_once "connect.php";
 			{
         $wiersz1 = $rezultat1->fetch_assoc();
         $wiersz2 = $rezultat2->fetch_assoc();
-
-			#	$dane['id_produkt'] = $wiersz1['id_produkt'];
-			#	$dane['nazwa'] = $wiersz1['nazwa'];
-			#	$dane['cena'] = $wiersz1['cena'];
-			#	$dane['rozmiar'] = $wiersz1['rozmiar'];
-			#	$dane['opis'] = $wiersz1['opis'];
-			#	$dane['ilosc'] = $wiersz1['ilosc'];
-			#	$dane['osoba_id_kategoria'] = $wiersz1['osoba_id_kategoria'];
-      # $dane['przeznacz_id_przeznacz'] = $wiersz1['przeznacz_id_przeznacz'];
-      #	$dane['prod_rodz_id_prod_rodz'] = $wiersz1['prod_rodz_id_prod_rodz'];
-			#	$dane['id_zdjecia'] = $wiersz2['id_zdjecia'];
-      # $dane['nazwa_zdjecia'] = $wiersz2['nazwa_zdjecia'];
-      # $dane['produkt_id_produkt'] = $wiersz2['produkt_id_produkt'];
         
 echo<<<END
 
