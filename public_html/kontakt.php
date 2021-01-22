@@ -1,3 +1,242 @@
+<?php
+
+	session_start();
+	
+	if (isset($_POST['email']))
+	{
+		//Udana walidacja? Załóżmy, że tak!
+		$wszystko_OK=true;
+		
+//		//Sprawdź poprawność nickname'a
+//		$login = $_POST['login'];
+//		
+//		//Sprawdzenie długości nicka
+//		if ((strlen($login)<3) || (strlen($login)>20))
+//		{
+//			$wszystko_OK=false;
+//			$_SESSION['e_login']='<span style="color:red; font-size:xx-small">Nick musi posiadać od 3 do 20 znaków!</span>';
+//		}
+//		
+//		if (ctype_alnum($login)==false)
+//		{
+//			$wszystko_OK=false;
+//			$_SESSION['e_login']='<span style="color:red; font-size:xx-small">Nick może składać się tylko z liter i cyfr</span>';
+//		}
+		
+		// Sprawdź poprawność adresu email
+		$email = $_POST['email'];
+		$emailB = filter_var($email, FILTER_SANITIZE_EMAIL);
+		
+		if ((filter_var($emailB, FILTER_VALIDATE_EMAIL)==false) || ($emailB!=$email))
+		{
+			$wszystko_OK=false;
+			$_SESSION['e_email']='<span style="color:red; font-size:xx-small">Podaj poprawny adres e-mail</span>';
+		}
+//		
+//		//Sprawdź poprawność hasła
+//		$haslo1 = $_POST['haslo1'];
+//		$haslo2 = $_POST['haslo2'];
+//		
+//		if ((strlen($haslo1)<8) || (strlen($haslo1)>20))
+//		{
+//			$wszystko_OK=false;
+//			$_SESSION['e_haslo1']='<span style="color:red; font-size:xx-small">Hasło musi posiadać od 8 do 20 znaków!</span>';
+//		}
+//		
+//		if ($haslo1!=$haslo2)
+//		{
+//			$wszystko_OK=false;
+//			$_SESSION['e_haslo2']='<span style="color:red; font-size:xx-small">Podane hasła nie są identyczne!</span>';
+//		}	
+//    
+//    //Sprawdzenie poprawnosci imienia 1
+//    $imie1 = $_POST['imie'];
+//		if (!isset($imie1))
+//		{
+//			$wszystko_OK=false;
+//			$_SESSION['e_imie']='<span style="color:red; font-size:xx-small">wprowadz imie</span>';
+//    }
+//    if (ctype_alnum($imie1)==false)
+//		{
+//			$wszystko_OK=false;
+//			$_SESSION['e_imie']='<span style="color:red; font-size:xx-small">imie może składać się tylko z liter</span>';
+//    }
+//
+//    //Sprawdzenie poprawnosci imienia 2, brak testu pobranie wartosci z formularza
+//    $imie2 = $_POST['imie2'];
+//    
+//    
+//    //Sprawdzenie poprawnosci nazwiska
+//    $nazwisko = $_POST['nazwisko'];
+//    if (!isset($nazwisko))
+//    {
+//      $wszystko_OK=false;
+//      $_SESSION['e_nazwisko']='<span style="color:red; font-size:xx-small">wprowadz nazwisko</span>';
+//    }
+//    if (ctype_alnum($nazwisko)==false)
+//    {
+//      $wszystko_OK=false;
+//      $_SESSION['e_nawisko']='<span style="color:red; font-size:xx-small">nazwisko może składać się tylko z liter</span>';
+//    }
+//
+    //sprawdzenie nr telefonu  
+    $telefon = $_POST['telefon'];
+    if (!is_numeric($telefon))
+    {
+      $wszystko_OK=false;
+      $_SESSION['e_telefon']='<span style="color:red; font-size:xx-small">wprowadz poprawny numer telefonu</span>';
+    }
+//    
+//    //Sprawdzenie poprawnosci wojewodztwa
+//    $wojewodztwo = $_POST['wojewodztwo'];
+//    if (!isset($wojewodztwo))
+//    {
+//      $wszystko_OK=false;
+//      $_SESSION['e_wojewodztwo']='<span style="color:red; font-size:xx-small">wprowadz wojewodztwo</span>';
+//    }
+//    
+//    //Sprawdzenie poprawnosci powiatu
+//    $powiat = $_POST['powiat'];
+//    if (!isset($powiat))
+//    {
+//      $wszystko_OK=false;
+//      $_SESSION['e_powiat']='<span style="color:red; font-size:xx-small">wprowadz powiat</span>';
+//    }
+//     //Sprawdzenie poprawnosci miasto
+//     $miasto = $_POST['miasto'];
+//     if (!isset($miasto))
+//     {
+//       $wszystko_OK=false;
+//       $_SESSION['e_miasto']='<span style="color:red; font-size:xx-small">wprowadz miasto</span>';
+//     }
+//
+//     //Sprawdzenie poprawnosci ulica
+//     $ulica = $_POST['ulica'];
+//     if (!isset($ulica))
+//     {
+//       $wszystko_OK=false;
+//       $_SESSION['e_ulica']='<span style="color:red; font-size:xx-small">wprowadz ulice</span>';
+//     }
+//
+//    
+//     
+//    //sprawdzenie nr domu  
+//    $nrdom = $_POST['nrdom'];
+//    if (!is_numeric($nrdom))
+//    {
+//      $wszystko_OK=false;
+//      $_SESSION['e_nrdom']='<span style="color:red; font-size:xx-small">wprowadz poprawny numer nrdom</span>';
+//    }
+//
+//
+//    //sprawdzenie nr kod pocztowy  
+//    $kodpocztowy = $_POST['kodpocztowy'];
+//    $reg = '/^([0-9.]{2})+\-([0-9.]{3})$/';
+//    
+//    if (!preg_match($reg, $kodpocztowy))
+//    {
+//      $wszystko_OK=false;
+//      $_SESSION['e_kodpocztowy']='<span style="color:red; font-size:xx-small">wprowadz poprawny kod pocztowy</span>';
+//    }
+    
+
+		require_once "connect.php";
+		mysqli_report(MYSQLI_REPORT_STRICT);
+		
+		try 
+		{
+                $polaczenie = new mysqli($host, $user, $password, $dbname);
+			if ($polaczenie->connect_errno!=0)
+			{
+				throw new Exception(mysqli_connect_errno());
+			}
+			else
+			{
+				//Czy email już istnieje?
+				$rezultat = $polaczenie->query("SELECT id_uzytk FROM uzytkownik1 WHERE mail='$email'");
+				
+//				if (!$rezultat) throw new Exception($polaczenie->error);
+				
+//				$ile_takich_maili = $rezultat->num_rows;
+//				if($ile_takich_maili>0)
+//				{
+//					$wszystko_OK=false;
+//					$_SESSION['e_email']='<span style="color:red; font-size:xx-small">Istnieje już konto przypisane do tego adresu e-mail!</span>';
+//				}		
+
+//				//Czy nick jest już zarezerwowany?
+//				$rezultat = $polaczenie->query("SELECT id_uzytk FROM uzytkownik1 WHERE nazwa='$login'");
+//				
+//				if (!$rezultat) throw new Exception($polaczenie->error);
+//				
+//				$ile_takich_nickow = $rezultat->num_rows;
+//				if($ile_takich_nickow>0)
+//				{
+//					$wszystko_OK=false;
+//					$_SESSION['e_login']='<span style="color:red; font-size:xx-small">Istnieje już gracz o takim nicku!</span>';
+//				}
+				
+                                
+                                
+                                
+                                
+                                
+                                
+				if ($wszystko_OK==true)
+				{
+					//Hurra, wszystkie testy zaliczone, dodajemy gracza do bazy
+          $idadres = mysqli_query($polaczenie, "SELECT id_kontakt FROM kontakt order by id_kontakt DESC limit 1");
+          //$iduzytkownik = mysqli_query($polaczenie, "SELECT id_uzytk FROM uzytkownik1 order by id_uzytk DESC limit 1");
+
+          $idadres = mysqli_fetch_assoc($idadres);
+          //$iduzytkownik = mysqli_fetch_assoc($iduzytkownik);
+          
+          $dodaj1 = $idadres['id_kontakt'];
+          //$dodaj2= $iduzytkownik['id_uzytk'];
+          
+          $dodaj1 = $dodaj1 + 1;
+          //$dodaj2 = $dodaj2 + 1;
+          $user = "user";
+          $aktywny = "aktywny";
+          $nrlokalu = "";
+          $dodawaniedanych1 = "INSERT INTO adres (id_adres, miasto, ulica, nr_domu, nr_lokalu, wojewodztwo, powiat, kod_pocztowy) 
+                                  VALUES ('$dodaj1', '$miasto', '$ulica', '$nrdom', '$nrlokalu', '$wojewodztwo', '$powiat', '$kodpocztowy')";
+          //$dodawaniedanych2 = "INSERT INTO uzytkownik1 (id_uzytk, nazwa, nazwisko, imie, imie_1, rodzaj_u, status_uzytkownika, adres_id_adres, telefon, mail, haslo1, haslo2) 
+                                  //VALUES ('$dodaj2', '$login', '$nazwisko', '$imie1', '$imie2', '$user', '$aktywny', '$dodaj1', '$telefon', '$email', '$haslo1', '$haslo2')";
+
+
+					if ($polaczenie->query($dodawaniedanych1) && $polaczenie->query($dodawaniedanych2) )
+					{
+            
+            mysqli_query($polaczenie, $dodawaniedanych1);
+            //mysqli_query($polaczenie, $dodawaniedanych2);
+
+						$_SESSION['udanarejestracja']=true;
+						header('Location: witamy.php');
+					}
+					else
+					{
+						throw new Exception($polaczenie->error);
+					}
+					
+				}
+				
+				$polaczenie->close();
+			}
+			
+		}
+		catch(Exception $e)
+		{
+			echo '<span style="color:red;">Błąd serwera! Przepraszamy za niedogodności i prosimy o rejestrację w innym terminie!</span>';
+			echo '<br />Informacja developerska: '.$e;
+		}
+		
+	}
+	
+	
+?>
+
+
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
