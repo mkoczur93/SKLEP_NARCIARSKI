@@ -1,13 +1,12 @@
 <?php
 
-	session_start();
-	
-	if (isset($_POST['email']))
-	{
+session_start();
+
+if (isset($_POST['email']))
+{
             //Udana walidacja? Załóżmy, że tak!
             $wszystko_OK=true;
-
-            // Sprawdź poprawność adresu email
+// Sprawdź poprawność adresu email
             $email = $_POST['email'];
             $emailB = filter_var($email, FILTER_SANITIZE_EMAIL);
 
@@ -17,13 +16,15 @@
                     $_SESSION['e_email']='<span style="color:red; font-size:xx-small">Podaj poprawny adres e-mail</span>';
             }
 
-            //sprawdzenie nr telefonu  
+     //sprawdzenie nr telefonu  
             $telefon = $_POST['telefon'];
             if (!is_numeric($telefon))
             {
               $wszystko_OK=false;
               $_SESSION['e_telefon']='<span style="color:red; font-size:xx-small">wprowadz poprawny numer telefonu</span>';
             }
+    //WIADOMOŚĆ
+            $info = $_POST['wiadomosc'];
 
 		require_once "connect.php";
 		mysqli_report(MYSQLI_REPORT_STRICT);
@@ -31,37 +32,28 @@
 		try 
 		{
                 $polaczenie = new mysqli($host, $user, $password, $dbname);
-			if ($polaczenie->connect_errno!=0)
-			{
-				throw new Exception(mysqli_connect_errno());
-			}
-			else
-			{
-				//Czy email już istnieje?
-				$rezultat = $polaczenie->query("SELECT id_uzytk FROM uzytkownik1 WHERE mail='$email'");
-			if ($wszystko_OK==true)
-			{
+                if ($polaczenie->connect_errno!=0)
+                {
+                        throw new Exception(mysqli_connect_errno());
+                }
+                else
+                {
+                
+                if ($wszystko_OK==true)
+                {
 					//Hurra, wszystkie testy zaliczone, dodajemy gracza do bazy
-          $idadres = mysqli_query($polaczenie, "SELECT id_kontakt FROM kontakt order by id_kontakt DESC limit 1");
-          //$iduzytkownik = mysqli_query($polaczenie, "SELECT id_uzytk FROM uzytkownik1 order by id_uzytk DESC limit 1");
-
-          $idadres = mysqli_fetch_assoc($idadres);
-          //$iduzytkownik = mysqli_fetch_assoc($iduzytkownik);
+          $idkontakt = mysqli_query($polaczenie, "SELECT id_kontakt FROM kontakt order by id_kontakt DESC limit 1");
+          $idkontakt = mysqli_fetch_assoc($idkontakt);
           
-          $dodaj1 = $idadres['id_kontakt'];
-          //$dodaj2= $iduzytkownik['id_uzytk'];
+          //pod warunkiem zalogowanego wstawić zapytanie do bazy o id zalogowanego w innym przypadku 
+          $iduzytkownik=null;
           
+          $dodaj1 = $idkontakt['id_kontakt'];
           $dodaj1 = $dodaj1 + 1;
-          //$dodaj2 = $dodaj2 + 1;
-          $user = "user";
-          $aktywny = "aktywny";
-          $nrlokalu = "";
-          $dodawaniedanych1 = "INSERT INTO adres (id_adres, miasto, ulica, nr_domu, nr_lokalu, wojewodztwo, powiat, kod_pocztowy) 
-                                  VALUES ('$dodaj1', '$miasto', '$ulica', '$nrdom', '$nrlokalu', '$wojewodztwo', '$powiat', '$kodpocztowy')";
-          //$dodawaniedanych2 = "INSERT INTO uzytkownik1 (id_uzytk, nazwa, nazwisko, imie, imie_1, rodzaj_u, status_uzytkownika, adres_id_adres, telefon, mail, haslo1, haslo2) 
-                                  //VALUES ('$dodaj2', '$login', '$nazwisko', '$imie1', '$imie2', '$user', '$aktywny', '$dodaj1', '$telefon', '$email', '$haslo1', '$haslo2')";
-
-
+                   
+          $dodawaniedanych1 = "INSERT INTO kontakt (id_kontakt, nazwa_nazwisko, imie, email, telefon, wiadomosc, uzytkownik1_id uzytk) 
+                                  VALUES ('$dodaj1', '$imie', ' ', '$email', '$telefon', '$wiadomosc',$iduzytkownik)";
+          
 					if ($polaczenie->query($dodawaniedanych1) && $polaczenie->query($dodawaniedanych2) )
 					{
             
@@ -242,8 +234,7 @@
                         <div class="dolewej">
                             <input type="tel" size="9" maxlength="9" name="telefon" pattern="[0-9]{9}" value="" onkeyup="FormUtil.tabForward(this)" />				
                         </div>
-                        <p></p>
-                        <textarea name="wiadomosc" placeholder="Wiadomosc" style="width: 100%; height: 300px"></textarea><br>
+                        <p></p> <textarea name="wiadomosc" placeholder="Wiadomosc" style="width: 100%; height: 300px"></textarea><br>
                         <input type="submit" name="submit" value="Wyslij" style="text-align: center;">
             </form>
 				

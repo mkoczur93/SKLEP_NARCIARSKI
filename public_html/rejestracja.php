@@ -328,34 +328,34 @@
 			</div>
 			<div class="card-body">
  <div class="col-md-6">
-				<form method="post">
-					<div class="input-group form-group" >
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class=""></i></span>
-						</div>
-						<input type="text" name="login" class="form-control" placeholder="Nazwa użytkownika">
-						<?php
-              if (isset($_SESSION['e_login']))
-              {
-                echo '<div class="error">'.$_SESSION['e_login'].'</div>';
-                unset($_SESSION['e_login']);
-              }
-            ?>
-						
-					</div>
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i></i></span>
-						</div>
-						<input type="password" name="haslo1" class="form-control"  placeholder="Hasło" >
-            <?php
-              if (isset($_SESSION['e_haslo1']))
-              {
-                echo '<div class="error">'.$_SESSION['e_haslo1'].'</div>';
-                unset($_SESSION['e_haslo1']);
-              }
-            ?>
-					</div>
+        <form method="post">
+                <div class="input-group form-group" >
+                        <div class="input-group-prepend">
+                                <span class="input-group-text"><i class=""></i></span>
+                        </div>
+                        <input type="text" name="login" class="form-control" placeholder="Nazwa użytkownika">
+                        <?php
+                          if (isset($_SESSION['e_login']))
+                          {
+                            echo '<div class="error">'.$_SESSION['e_login'].'</div>';
+                            unset($_SESSION['e_login']);
+                          }
+                        ?>
+
+                </div>
+                <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                                <span class="input-group-text"><i></i></span>
+                        </div>
+                        <input type="password" name="haslo1" class="form-control"  placeholder="Hasło" >
+                        <?php
+                          if (isset($_SESSION['e_haslo1']))
+                          {
+                            echo '<div class="error">'.$_SESSION['e_haslo1'].'</div>';
+                            unset($_SESSION['e_haslo1']);
+                          }
+                        ?>
+                </div>
 					
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
@@ -541,7 +541,7 @@
 						<input type="submit" value="Zarejestruj" class="btn float-right login_btn" >
           </div>
 </div>
-				</form>
+    </form>
 			</div>
 			<div class="col-md-12 card-footer">
 				<div class="d-flex justify-content-center links">
