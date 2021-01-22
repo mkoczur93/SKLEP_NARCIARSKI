@@ -1,10 +1,3 @@
-<?php
-
-			
-
-?>
-
-
 
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
@@ -150,7 +143,6 @@ END;
 
           while(($dane = mysqli_fetch_array($rezultat1)) && ($dane1 = mysqli_fetch_array($rezultat2))) 
           { 
-            $zdjecie = "img/zjecia/".$dane1['nazwa'];
   
 echo<<<END
 
@@ -211,10 +203,7 @@ echo<<<END
     </div>
   </div>
 END;
-} else {
-					
-  $dane['blad'] = '<span style="color:red">Nieprawidłowy login lub hasło!</span>';					
-}
+} 
 
 }
     
