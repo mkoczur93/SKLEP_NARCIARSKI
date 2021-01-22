@@ -36,17 +36,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 			{
                 $_SESSION['zalogowany'] = true;
 				$wiersz = $rezultat->fetch_assoc();
-			#	$_SESSION['id_uzytk'] = $wiersz['id_uzytk'];
-			#	$_SESSION['nazwa'] = $wiersz['nazwa'];
-			#	$_SESSION['nazwisko'] = $wiersz['nazwisko'];
+				$_SESSION['id_uzytk'] = $wiersz['id_uzytk'];
+				$_SESSION['nazwa'] = $wiersz['nazwa'];
+				$_SESSION['nazwisko'] = $wiersz['nazwisko'];
 				$_SESSION['imie'] = $wiersz['imie'];
-			#	$_SESSION['imie_1'] = $wiersz['imie_1'];
+				$_SESSION['imie_1'] = $wiersz['imie_1'];
 				$_SESSION['rodzaj_u'] = $wiersz['rodzaj_u'];
 			#	$_SESSION['status'] = $wiersz['status'];
-            #   $_SESSION['adres_id_adres'] = $wiersz['adres_id_adres'];
-    		#	$_SESSION['telefon'] = $wiersz['telefon'];
-			#	$_SESSION['mail'] = $wiersz['mail'];
-			#   $_SESSION['haslo1'] = $wiersz['haslo1'];
+                $_SESSION['adres_id_adres'] = $wiersz['adres_id_adres'];
+    			$_SESSION['telefon'] = $wiersz['telefon'];
+				$_SESSION['mail'] = $wiersz['mail'];
+			    $_SESSION['haslo1'] = $wiersz['haslo1'];
 				if($_SESSION['rodzaj_u'] == "admin")
 				{
 					unset($_SESSION['blad']);

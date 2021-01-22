@@ -205,7 +205,7 @@
         <div class="container-fluid">
         
           <ul class="nav navbar-nav" >
-            <li class="active"><a href="http://localhost/sklep_narciarski/public_html/admin.php">Strona Główna</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/admin.php">Strona Główna</a></li>
 
       <!--Dropp menu-->
             <li class="nav-item dropdown">
@@ -233,14 +233,17 @@
 			<!--Drop menu -->
 			
 			
-			   <li class="nav-item dropdown">
+			   <li class="nav-item dropdown active">
               <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                 Profil
               </a>
               <div class="dropdown-menu dropstyle">
-			    <a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/Nprodukt.php">Dodaj produkt</br></a>
-				<a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/ZamowieniaUser.php">Historia zamowien</a>
-                <a class="dropdown-item dropstyle"  href="http://localhost/sklep_narciarski/public_html/EdytujProfilUser.php">Edycja profilu</a>
+
+			    <a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/Nprodukt.php">Dodaj Produkt</br></a>
+				<a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/pracownik.php">Dodaj Pracownika</br></a>
+				<a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/ZamowieniaAdmin.php">Historia Zamowien</a>
+                <a class="dropdown-item dropstyle"  href="http://localhost/sklep_narciarski/public_html/EdytujProfilAdmin.php">Edycja Profilu</a>
+
 
               </div>
             </li>
@@ -248,6 +251,7 @@
 			
 			<!--Drop menu end -->
 			
+				
 			
 				
 			

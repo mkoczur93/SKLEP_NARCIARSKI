@@ -60,7 +60,7 @@
         <div class="container-fluid">
         
           <ul class="nav navbar-nav" >
-            <li class="active"><a href="http://localhost/sklep_narciarski/public_html/admin.php">Strona Główna</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/admin.php">Strona Główna</a></li>
 
       <!--Dropp menu-->
             <li class="nav-item dropdown">
@@ -79,11 +79,12 @@
             <li><a href="http://localhost/sklep_narciarski/public_html/sklepAdmin.php">Sklep</a></li>
             <li><a href="http://localhost/sklep_narciarski/public_html/trasyAdmin.php">Trasy</a></li>
             <li><a href="http://localhost/sklep_narciarski/public_html/instruktorzyAdmin.php">Instruktorzy</a></li>
-            <li><a href="http://localhost/sklep_narciarski/public_html/noclegiAdmin.php">Noclegi</a></li>
+            <li class="active"><a href="http://localhost/sklep_narciarski/public_html/noclegiAdmin.php">Noclegi</a></li>
             <li><a href="http://localhost/sklep_narciarski/public_html/restauracjeAdmin.php">Restauracje</a></li>
             <li><a href="http://localhost/sklep_narciarski/public_html/kameraonlineAdmin.php">Kamera Online</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
+			
 			
 			<!--Drop menu -->
 			
@@ -94,6 +95,7 @@
               </a>
               <div class="dropdown-menu dropstyle">
 			    <a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/Nprodukt.php">Dodaj Produkt</br></a>
+				<a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/pracownik.php">Dodaj Pracownika</br></a>
 				<a class="dropdown-item dropstyle" href="http://localhost/sklep_narciarski/public_html/ZamowieniaAdmin.php">Historia Zamowien</a>
                 <a class="dropdown-item dropstyle"  href="http://localhost/sklep_narciarski/public_html/EdytujProfilAdmin.php">Edycja Profilu</a>
 
@@ -102,8 +104,6 @@
 			
 			
 			<!--Drop menu end -->
-			
-			
 				
 			
 			
