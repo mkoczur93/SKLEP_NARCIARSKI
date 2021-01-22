@@ -193,7 +193,7 @@
           $user = "user";
           $aktywny = "aktywny";
           $nrlokalu = "";
-          $dodawaniedanych1 = "INSERT INTO adres (id_adres, miasto, ulica, nr_domu, nr_lokalu, województwo, powiat, kod_pocztowy) 
+          $dodawaniedanych1 = "INSERT INTO adres (id_adres, miasto, ulica, nr_domu, nr_lokalu, wojewodztwo, powiat, kod_pocztowy) 
                                   VALUES ('$dodaj1', '$miasto', '$ulica', '$nrdom', '$nrlokalu', '$wojewodztwo', '$powiat', '$kodpocztowy')";
           $dodawaniedanych2 = "INSERT INTO uzytkownik1 (id_uzytk, nazwa, nazwisko, imie, imie_1, rodzaj_u, status_uzytkownika, adres_id_adres, telefon, mail, haslo1, haslo2) 
                                   VALUES ('$dodaj2', '$login', '$nazwisko', '$imie1', '$imie2', '$user', '$aktywny', '$dodaj1', '$telefon', '$email', '$haslo1', '$haslo2')";
