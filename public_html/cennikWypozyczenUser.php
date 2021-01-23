@@ -62,10 +62,10 @@
         <div class="container-fluid">
         
           <ul class="nav navbar-nav" >
-            <li class="active"><a href="http://localhost/sklep_narciarski/public_html/user.php">Strona Główna</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/user.php">Strona Główna</a></li>
 
       <!--Dropp menu-->
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown active">
               <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                 Cennik
               </a>

@@ -61,7 +61,7 @@
         <div class="container-fluid">
         
           <ul class="nav navbar-nav" >
-            <li class="active"><a href="http://localhost/sklep_narciarski/public_html/user.php">Strona Główna</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/user.php">Strona Główna</a></li>
 
       <!--Dropp menu-->
             <li class="nav-item dropdown">
@@ -82,7 +82,7 @@
             <li><a href="http://localhost/sklep_narciarski/public_html/instruktorzyUser.php">Instruktorzy</a></li>
             <li><a href="http://localhost/sklep_narciarski/public_html/noclegiUser.php">Noclegi</a></li>
             <li><a href="http://localhost/sklep_narciarski/public_html/restauracjeUser.php">Restauracje</a></li>
-            <li><a href="http://localhost/sklep_narciarski/public_html/kameraonlineUser.php">Kamera Online</a></li>
+            <li class="active"><a href="http://localhost/sklep_narciarski/public_html/kameraonlineUser.php">Kamera Online</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
 			<li><a href="http://localhost/sklep_narciarski/public_html/KoszykUser.php">Koszyk</a></li>
