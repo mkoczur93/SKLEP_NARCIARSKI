@@ -2,7 +2,7 @@
 
 session_start();
 
-if (isset($_POST['email']))
+if (isset($_POST['wiadomosc']))
 {
             //Udana walidacja? Załóżmy, że tak!
             $wszystko_OK=true;
@@ -30,7 +30,7 @@ if (isset($_POST['email']))
             $info = $_POST['wiadomosc'];
             
             //pod warunkiem zalogowanego wstawić zapytanie do bazy o id zalogowanego w innym przypadku wymaga ustawienia warunku
-            $iduzytkownik=1;
+            //$iduzytkownik=1;
             
             
              

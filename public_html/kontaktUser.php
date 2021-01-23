@@ -9,8 +9,98 @@
         header('Location: index.php');
         exit();
     }
+    //require_once "zaloguj.php";
+    $uzytkownik1_id_uzytk=$_SESSION['id_uzytk'];    
+    $imie = $_SESSION['imie'];
+    $nazwa_nazwisko=$_SESSION['nazwa'];
+    $telefon=$_SESSION['telefon'];
+    $email=$_SESSION['mail'];
+    
+    
+    
+    if (isset($_POST['wiadomosc']))
+{
+//            //Udana walidacja? Załóżmy, że tak!
+//            $wszystko_OK=true;
+//// Sprawdź poprawność adresu email
+//            $email = $_POST['email'];
+//            $emailB = filter_var($email, FILTER_SANITIZE_EMAIL);
+//
+//            if ((filter_var($emailB, FILTER_VALIDATE_EMAIL)==false) || ($emailB!=$email))
+//            {
+//                    $wszystko_OK=false;
+//                    $_SESSION['e_email']='<span style="color:red; font-size:xx-small">Podaj poprawny adres e-mail</span>';
+//            }
+//
+//     //sprawdzenie nr telefonu  
+//            $telefon = $_POST['telefon'];
+//            if (!is_numeric($telefon))
+//            {
+//              $wszystko_OK=false;
+//              $_SESSION['e_telefon']='<span style="color:red; font-size:xx-small">wprowadz poprawny numer telefonu</span>';
+//            }
+//    //WIADOMOŚĆ
+            
+            
+            //$imie=$_POST['imie'];
+            $info = $_POST['wiadomosc'];
+            
+            //pod warunkiem zalogowanego wstawić zapytanie do bazy o id zalogowanego w innym przypadku wymaga ustawienia warunku
+            //$iduzytkownik=1; 
+            
+		require_once "connect.php";
+		mysqli_report(MYSQLI_REPORT_STRICT);
+		
+		try 
+		{
+                $polaczenie = new mysqli($host, $user, $password, $dbname);
+                if ($polaczenie->connect_errno!=0)
+                {
+                        throw new Exception(mysqli_connect_errno());
+                }
+                else
+                {
+                
+                if ($wszystko_OK==true)
+                {
+					//Hurra, wszystkie testy zaliczone, dodajemy gracza do bazy
+                  $idkontakt = mysqli_query($polaczenie, "SELECT id_kontakt FROM kontakt order by id_kontakt DESC limit 1");
+                  $idkontakt = mysqli_fetch_assoc($idkontakt);
 
-	$imie = $_SESSION['imie'];
+
+
+                  $dodaj1 = $idkontakt['id_kontakt'];
+                  $dodaj1 = $dodaj1 + 1;
+
+                  $dodawaniedanych1 = "INSERT INTO kontakt VALUES ('$dodaj1','$nazwa_nazwisko', '$imie', '$email', '$telefon', '$info','$uzytkownik1_id_uzytk')";
+          
+                  //$dodawaniedanych1 = "INSERT INTO kontakt (id_kontakt, nazwa_nazwisko, email, telefon, wiadomosc)VALUES ('$dodaj1', '$imie', '$email', '$telefon', '$info')";
+          
+                   if ($polaczenie->query($dodawaniedanych1))
+                    {
+                        mysqli_query($polaczenie, $dodawaniedanych1);
+                        $_SESSION['S_dodania']='<span style="margin-left:20px; align: center; color:white; font-weight: 800; font-size: 30px;">Informacja została wysłana!</span>';
+                    }
+                    
+                    else
+                    {
+                            throw new Exception($polaczenie->error);
+                    }
+                }
+                    $polaczenie->close(); 
+                                
+		}
+			
+		}
+		catch(Exception $e)
+		{
+			echo '<span style="color:red;">Błąd serwera! Przepraszamy za niedogodności i prosimy o rejestrację w innym terminie!</span>';
+			echo '<br />Informacja developerska: '.$e;
+		}
+		
+	}                
+    
+        
 
 
 ?>
@@ -163,14 +253,14 @@
             <div class="col-sm-12 formularzNaglowek"> 
 
 		<header>
-		<h1>Formularz</h1>
+                    <h1>Formularz zgłoszeniowy użytkownika <?php echo $imie ?> </h1>
 		</header>
             </div>
 		<div class="col-sm-12 formularz">      
             
         <div class="col-sm-3"></div>
-            <form action="mail.php" method="post" enctype="multipart/form-data" class="col-sm-6">
-                 <label class="bialyNapis">Imie:</label></br>
+        <form action="kontaktUser.php" method="post" enctype="multipart/form-data" class="col-sm-6">
+<!--                 <label class="bialyNapis">Imie:</label></br>
                 <input type="text" name="imie" placeholder="Imie"><p></p>
                 <label class="bialyNapis">Email:</label></br>
 				<input type="email" name="email" placeholder="E-mail"><p></p>
@@ -180,12 +270,19 @@
 			    <input type="tel" size="9" maxlength="9" name="telefon" pattern="[0-9]{9}" value="" onkeyup="FormUtil.tabForward(this)" />				
 		
 				</div>
-				<p></p>
+				<p></p>-->
 
 			
 				<textarea name="wiadomosc" placeholder="Wiadomosc" style="width: 100%; height: 300px"></textarea><br>
 				<input type="submit" name="submit" value="Wyslij" style="text-align: center;">
-			</form>
+                            <?php
+                        if (isset($_SESSION['S_dodania']))
+                        {
+                            echo '<div >'.$_SESSION['S_dodania'].'</div>';
+                            unset($_SESSION['S_dodania']);
+                        }
+                        ?>   
+	</form>
 				
             <div class="col-sm-3"></div>
 	
