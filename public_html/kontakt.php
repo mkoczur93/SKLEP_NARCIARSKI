@@ -60,12 +60,12 @@ if (isset($_POST['email']))
                   $dodaj1 = $idkontakt['id_kontakt'];
                   $dodaj1 = $dodaj1 + 1;
 
-                  $dodawaniedanych1 = "INSERT INTO kontakt VALUES ('$dodaj1', '$imie', 'test', '$email', '$telefon', '$wiadomosc','$iduzytkownik')";
+                  $dodawaniedanych1 = "INSERT INTO kontakt (id_kontakt, nazwa_nazwisko, email, telefon, wiadomosc)VALUES ('$dodaj1', '$imie', '$email', '$telefon', '$info')";
           
                    if ($polaczenie->query($dodawaniedanych1))
                     {
                         mysqli_query($polaczenie, $dodawaniedanych1);
-                        $_SESSION['S_dodania']='<span style="margin-left:70px; color:white; font-weight: 800; font-size: 36px;">Informacja wysłana!</span>';
+                        $_SESSION['S_dodania']='<span style="margin-left:20px; align: center; color:white; font-weight: 800; font-size: 30px;">Informacja została wysłana!</span>';
                     }
                     else
                     {
