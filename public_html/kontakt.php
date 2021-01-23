@@ -24,7 +24,17 @@ if (isset($_POST['email']))
               $_SESSION['e_telefon']='<span style="color:red; font-size:xx-small">wprowadz poprawny numer telefonu</span>';
             }
     //WIADOMOŚĆ
+            
+            
+            $imie=$_POST['imie'];
             $info = $_POST['wiadomosc'];
+            
+            //pod warunkiem zalogowanego wstawić zapytanie do bazy o id zalogowanego w innym przypadku wymaga ustawienia warunku
+            $iduzytkownik=1;
+            
+            
+             
+            
 
 		require_once "connect.php";
 		mysqli_report(MYSQLI_REPORT_STRICT);
@@ -42,36 +52,29 @@ if (isset($_POST['email']))
                 if ($wszystko_OK==true)
                 {
 					//Hurra, wszystkie testy zaliczone, dodajemy gracza do bazy
-          $idkontakt = mysqli_query($polaczenie, "SELECT id_kontakt FROM kontakt order by id_kontakt DESC limit 1");
-          $idkontakt = mysqli_fetch_assoc($idkontakt);
-          
-          //pod warunkiem zalogowanego wstawić zapytanie do bazy o id zalogowanego w innym przypadku 
-          $iduzytkownik=null;
-          
-          $dodaj1 = $idkontakt['id_kontakt'];
-          $dodaj1 = $dodaj1 + 1;
-                   
-          $dodawaniedanych1 = "INSERT INTO kontakt (id_kontakt, nazwa_nazwisko, imie, email, telefon, wiadomosc, uzytkownik1_id uzytk) 
-                                  VALUES ('$dodaj1', '$imie', ' ', '$email', '$telefon', '$wiadomosc',$iduzytkownik)";
-          
-					if ($polaczenie->query($dodawaniedanych1) && $polaczenie->query($dodawaniedanych2) )
-					{
-            
-            mysqli_query($polaczenie, $dodawaniedanych1);
-            //mysqli_query($polaczenie, $dodawaniedanych2);
+                  $idkontakt = mysqli_query($polaczenie, "SELECT id_kontakt FROM kontakt order by id_kontakt DESC limit 1");
+                  $idkontakt = mysqli_fetch_assoc($idkontakt);
 
-						$_SESSION['udanarejestracja']=true;
-						header('Location: witamy.php');
-					}
-					else
-					{
-						throw new Exception($polaczenie->error);
-					}
-					
-				}
-				
-				$polaczenie->close();
-			}
+
+
+                  $dodaj1 = $idkontakt['id_kontakt'];
+                  $dodaj1 = $dodaj1 + 1;
+
+                  $dodawaniedanych1 = "INSERT INTO kontakt VALUES ('$dodaj1', '$imie', 'test', '$email', '$telefon', '$wiadomosc','$iduzytkownik')";
+          
+                   if ($polaczenie->query($dodawaniedanych1))
+                    {
+                        mysqli_query($polaczenie, $dodawaniedanych1);
+                        $_SESSION['S_dodania']='<span style="margin-left:70px; color:white; font-weight: 800; font-size: 36px;">Informacja wysłana!</span>';
+                    }
+                    else
+                    {
+                            throw new Exception($polaczenie->error);
+                    }
+                }
+                    $polaczenie->close(); 
+                                
+		}
 			
 		}
 		catch(Exception $e)
@@ -224,10 +227,10 @@ if (isset($_POST['email']))
 		<div class="col-sm-12 formularz">      
             
         <div class="col-sm-3"></div>
-            <form action="mail.php" method="post" enctype="multipart/form-data" class="col-sm-6">
+        <form action="kontakt.php" method="post" enctype="multipart/form-data" class="col-sm-6">
                  <label class="bialyNapis">Imie:</label></br>
                     <input type="text" name="imie" placeholder="Imie"><p></p>
-                <label class="bialyNapis">Email:</label></br>
+                 <label class="bialyNapis">Email:</label></br>
                         <input type="email" name="email" placeholder="E-mail"><p></p>
                         <label class="bialyNapis">Telefon Kontaktowy:</label>
                             <p></p>
@@ -236,7 +239,15 @@ if (isset($_POST['email']))
                         </div>
                         <p></p> <textarea name="wiadomosc" placeholder="Wiadomosc" style="width: 100%; height: 300px"></textarea><br>
                         <input type="submit" name="submit" value="Wyslij" style="text-align: center;">
-            </form>
+                        
+                        <?php
+                        if (isset($_SESSION['S_dodania']))
+                        {
+                            echo '<div >'.$_SESSION['S_dodania'].'</div>';
+                            unset($_SESSION['S_dodania']);
+                        }
+                        ?>
+        </form>
 				
             <div class="col-sm-3"></div>
 	
