@@ -65,7 +65,7 @@
         <div class="container-fluid">
         
           <ul class="nav navbar-nav" >
-            <li class="active"><a href="http://localhost/sklep_narciarski/public_html/user.php">Strona Główna</a></li>
+            <li><a href="http://localhost/sklep_narciarski/public_html/user.php">Strona Główna</a></li>
 
       <!--Dropp menu-->
             <li class="nav-item dropdown">
@@ -81,7 +81,7 @@
       <!--Dropp end-->
 
             <li><a href="http://localhost/sklep_narciarski/public_html/kontaktUser.php">Kontakt</a></li>
-            <li><a href="http://localhost/sklep_narciarski/public_html/sklepUser.php">Sklep</a></li>
+            <li class="active"><a href="http://localhost/sklep_narciarski/public_html/sklepUser.php">Sklep</a></li>
             <li><a href="http://localhost/sklep_narciarski/public_html/trasyUser.php">Trasy</a></li>
             <li><a href="http://localhost/sklep_narciarski/public_html/instruktorzyUser.php">Instruktorzy</a></li>
             <li><a href="http://localhost/sklep_narciarski/public_html/noclegiUser.php">Noclegi</a></li>
