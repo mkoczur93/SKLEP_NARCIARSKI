@@ -20,34 +20,9 @@
     
     if (isset($_POST['wiadomosc']))
 {
-//            //Udana walidacja? Załóżmy, że tak!
-//            $wszystko_OK=true;
-//// Sprawdź poprawność adresu email
-//            $email = $_POST['email'];
-//            $emailB = filter_var($email, FILTER_SANITIZE_EMAIL);
-//
-//            if ((filter_var($emailB, FILTER_VALIDATE_EMAIL)==false) || ($emailB!=$email))
-//            {
-//                    $wszystko_OK=false;
-//                    $_SESSION['e_email']='<span style="color:red; font-size:xx-small">Podaj poprawny adres e-mail</span>';
-//            }
-//
-//     //sprawdzenie nr telefonu  
-//            $telefon = $_POST['telefon'];
-//            if (!is_numeric($telefon))
-//            {
-//              $wszystko_OK=false;
-//              $_SESSION['e_telefon']='<span style="color:red; font-size:xx-small">wprowadz poprawny numer telefonu</span>';
-//            }
-//    //WIADOMOŚĆ
-            
-            
-            //$imie=$_POST['imie'];
+
             $info = $_POST['wiadomosc'];
-            
-            //pod warunkiem zalogowanego wstawić zapytanie do bazy o id zalogowanego w innym przypadku wymaga ustawienia warunku
-            //$iduzytkownik=1; 
-            
+                       
 		require_once "connect.php";
 		mysqli_report(MYSQLI_REPORT_STRICT);
 		
