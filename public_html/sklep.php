@@ -18,7 +18,15 @@
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+<style>
 
+img{
+	
+	max-height: 300px;
+}
+
+
+</style>
 
         
 
@@ -146,7 +154,7 @@ END;
   
 echo<<<END
 
-            <div class="col-md-12">
+            <div class="col-md-12" style="border:solid;margin-top:10px;">
               <div class="row no-gutters">
                 
                 <div class="col-md-12">
@@ -185,9 +193,20 @@ echo<<<END
                 </div>
                 
               </div>
+
+
+
               <div class="col-md-9"></div>
               <div class="col-md-3">
-                <button class="nocleg" onclick="">"Dodaj do koszyka"</button></p>
+END;
+
+                    
+					echo 'Cena: '.$dane['cena'].'zł';
+echo<<<END
+              </div>
+              <div class="col-md-9"></div>
+              <div class="col-md-3">
+                <button class="btn btn-primary" onclick="">Dodaj do koszyka</button></p>
               </div>
             </div>
           </div>
